@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en"
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head">
+    <meta charset="UTF-8">
+    <title th:text="'Item Registration :: ' + ${pageTitle ?: 'Home'}"></title>
+    <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+<body>
+    <div th:fragment="header-nav">
+        <header><h1>Item Registration</h1></header>
+        <nav>
+            <a th:href="@{/}">Home</a>
+            <a th:href="@{/list}">Item List</a>
+            <a th:href="@{/register}">Register Item</a>
+        </nav>
+    </div>
+    <footer th:fragment="footer">
+        &copy; Registration 2026<br>
+        <a href="mailto:info@itemregistration.com">Contact Us</a>
+    </footer>
+
+</body>
+</html>

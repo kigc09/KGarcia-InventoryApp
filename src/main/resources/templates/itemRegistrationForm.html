@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:replace=" ~{fragments :: head}"></head>
+<body>
+<div th:replace="~{fragments :: header-nav}"></div>
+<main>
+  <h2>Register Item</h2>
+  <form method="POST" th:object="${item}" enctype="multipart/form-data">
+    ID:
+    <input type="text" th:field="*{id}" />
+    <span class="validationError"
+        th:if="${#fields.hasErrors('id')}"
+        th:errors="*{id}">
+      ID ERROR
+    </span>
+    <br>
+
+    Name: <input type="text" th:field="*{name}"/>
+    <span class="validationError"
+          th:if="${#fields.hasErrors('name')}"
+          th:errors="*{name}">NAME ERROR
+    </span>
+    <br>
+
+    Manufacturer: <input type="text" th:field="*{manufacturer}" />
+    <span class="validationError"
+          th:if="${#fields.hasErrors('manufacturer')}"
+          th:errors="*{manufacturer}">
+      MANUFACTURER ERROR
+    </span>
+    <br>
+
+    Price: <input type="number" step="0.01" th:field="*{price}"/>
+    <span class="validationError"
+          th:if="${#fields.hasErrors('price')}"
+          th:errors="*{price}">PRICE ERROR
+    </span>
+    <br>
+
+    Inventory: <input type="number" th:field="*{inventory}"/>
+    <span class="validationError"
+          th:if="${#fields.hasErrors('inventory')}"
+          th:errors="*{inventory}">
+        INVENTORY ERROR
+    </span>
+    <br>
+
+    Item Type:
+    <select th:field="*{itemType}">
+      <option value="">Select Item Type</option>
+      <option th:each="t: ${ItemType}"
+          th:value="${t.name()}"
+          th:text="${t}">
+      </option>
+    </select>
+    <br>
+
+    Upload Picture: <input type="file" th:field="*{image}" /><br>
+    <button type="submit">Add Item</button>
+  </form>
+</main>
+<footer th:replace="~{fragments :: footer}"></footer>
+</body>
+</html>
