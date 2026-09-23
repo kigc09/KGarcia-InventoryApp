@@ -1,0 +1,106 @@
+body{
+
+}
+
+header{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    padding: 30px;
+    background-color: #4f9cda;
+}
+
+header img {
+    position: absolute;
+    left: 50px;
+}
+
+header h1{
+    margin: 0;
+    margin-bottom: 0;
+    font-size: 3.5em;
+    line-height: 350%;
+    text-align: center;
+    color: white;
+}
+
+nav{
+    position: sticky;
+    text-align: center;
+    padding: 25px;
+    background-color: #4f9cda;
+    gap: 30px;
+}
+
+nav a{
+    font-size: 1.5em;
+    text-decoration: none;
+    color: white;
+    margin-right: 10%;
+    margin-left: 10%;
+    font-weight: bold;
+}
+main {
+    overflow: hidden;
+    padding: 20px;
+}
+
+main h2{
+    text-align: center;
+}
+
+.imageRight{
+    float:right;
+}
+
+#pageCenter{
+    width: 80%;
+    margin-right: 10%;
+    margin-left: 10%;
+    min-width: 960px;
+}
+
+section{
+    padding: 10px;
+    background-color: #CBC3E3;
+}
+
+form{
+    width: 90%;
+    max-width: 550px;
+    margin: 30px auto;
+    padding: 30px;
+
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    background-color: white;
+
+    font-size: 16px;
+}
+
+form input, form select {
+    width: 100%;
+    box-sizing:  border-box;
+
+    margin-top: 6px;
+    margin-bottom: 15px;
+    padding: 10px;
+
+    font-size: 16px;
+}
+
+footer {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 8px;
+    text-align: center;
+    background-color: #4f9cda;
+}
+
+.validationError{
+    color: red;
+    font-style: italic;
+}

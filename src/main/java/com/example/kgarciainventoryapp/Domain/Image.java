@@ -1,6 +1,6 @@
 package com.example.kgarciainventoryapp.Domain;
 
-import org.jspecify.annotations.Nullable;
+import java.util.Base64;
 
 public class Image {
     private String name;
@@ -41,5 +41,9 @@ public class Image {
 
     public void setEncoding(String encoding) {
         this.encoding = encoding;
+    }
+
+    public String getDataUri() {
+        return "data:" + encoding + ";base64," + Base64.getEncoder().encodeToString(contents);
     }
 }

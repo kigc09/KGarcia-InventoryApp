@@ -1,5 +1,7 @@
 package com.example.kgarciainventoryapp.Domain;
 
+import jakarta.validation.constraints.NotBlank;
+
 import java.util.UUID;
 
 public class Item {

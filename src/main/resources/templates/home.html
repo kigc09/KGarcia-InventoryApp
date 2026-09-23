@@ -3,12 +3,12 @@
       xmlns="http://www.w3.org/1999/xhtml"
     xmlns:th="http://www.thymeleaf.org">
     <head th:replace="~{fragments :: head}"></head>
-    <body>
+    <body id="pageCenter">
         <div th:replace="~{fragments :: header-nav}"></div> 
         <main>
             <h2>Welcome to MCC Bookstore!</h2>
             <img class="imageRight" th:src="@{Images/frontpagestore.jpg}" width="350" height="350" alt="MCC Bookstore Interior." />
-            <p></p>
+            <p>Drop by and stock up on your school supplies.</p>
         </main>
         <footer th:replace="~{fragments :: footer}"></footer>
     </body>

@@ -9,7 +9,10 @@
 </head>
 <body>
     <div th:fragment="header-nav">
-        <header><h1>Item Registration</h1></header>
+        <header>
+            <img th:src="@{/Images/header.png}" alt="Logo">
+            <h1>MCC Bookstore</h1>
+        </header>
         <nav>
             <a th:href="@{/}">Home</a>
             <a th:href="@{/list}">Item List</a>
@@ -17,7 +20,7 @@
         </nav>
     </div>
     <footer th:fragment="footer">
-        &copy; Registration 2026<br>
+        <p>&copy; Registration 2026</p><br>
         <a href="mailto:info@itemregistration.com">Contact Us</a>
     </footer>
 
