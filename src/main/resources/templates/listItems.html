@@ -18,7 +18,8 @@
                     th:src="@{/Images/noimage.png}" alt="No image provided."/>
                 <br>
                 <h3><a th:href="@{'/view/current/'+${current.id}}" th:text="${current.name}">ITEM NAME</a></h3>
-                <p th:text="${current.itemType}">TYPE</p>
+                <p>ITEM TYPE: <span th:text="${current.itemType}"></span></p>
+                <p>PRICE: $<span  th:text="${#numbers.formatDecimal(current.price,1,2)}"></span></p>
             </section>
         </div>
     </main>

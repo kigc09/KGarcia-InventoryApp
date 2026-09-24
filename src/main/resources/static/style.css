@@ -64,6 +64,9 @@ main h2{
 
 section{
     padding: 10px;
+    border-radius: 15px;
+    margin-top: 25px;
+    margin-bottom: 25px;
     background-color: #CBC3E3;
 }
 

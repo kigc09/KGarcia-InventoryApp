@@ -12,9 +12,9 @@
         <br>
     </aside>
     <h2 th:text="${current.name}">ITEM NAME</h2>
-    <p>MANUFACTURER<span th:text="${current.manufacturer}"></span></p>
-    <p>PRICE<span  th:text="${current.price}"></span></p>
-    <p>ITEM TYPE <span th:text="${current.itemType}"></span></p>
+    <p>MANUFACTURER: <span th:text="${current.manufacturer}"></span></p>
+    <p>PRICE: $<span  th:text="${#numbers.formatDecimal(current.price,1,2)}"></span></p>
+    <p>ITEM TYPE: <span th:text="${current.itemType}"></span></p>
 </main>
 <footer th:replace="~{fragments :: footer}"></footer>
 </body>
