@@ -8,8 +8,11 @@ import org.springframework.stereotype.Component;
 public class ItemTypeByIdConverter implements Converter<String, ItemType> {
     @Override
     public ItemType convert(String source){
-        if (source.equals("Item")){
+        if (source.equals("Food & Drink")){
             return ItemType.FOOD_DRINK;
+        }
+        if (source.equals("School Material")){
+            return ItemType.SCHOOL_MATERIAL;
         }
         return ItemType.valueOf(source.toUpperCase());
     }

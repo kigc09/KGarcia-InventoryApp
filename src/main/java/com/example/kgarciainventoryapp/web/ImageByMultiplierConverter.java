@@ -17,7 +17,7 @@ public class ImageByMultiplierConverter implements Converter<MultipartFile, Imag
     public Image convert(MultipartFile file){
         Image image = new Image();
         if (!file.isEmpty()){
-            image.setName(file.getOriginalFilename());
+            image.setImageName(file.getOriginalFilename());
             image.setEncoding(file.getContentType());
             try{
                 image.setContents(file.getBytes());

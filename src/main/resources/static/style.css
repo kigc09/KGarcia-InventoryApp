@@ -51,6 +51,11 @@ main h2{
     text-align: center;
 }
 
+image{
+    width: 100px;
+    height: 100px;
+}
+
 .imageRight{
     float:right;
 }

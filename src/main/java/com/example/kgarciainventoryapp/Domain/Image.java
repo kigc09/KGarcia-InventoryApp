@@ -1,30 +1,38 @@
 package com.example.kgarciainventoryapp.Domain;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Embeddable;
+import jakarta.persistence.Lob;
+
 import java.util.Base64;
 
+@Embeddable
 public class Image {
-    private String name;
+    private String imageName;
     private String encoding;
+
+    @Lob
+    @Column(columnDefinition = "BLOB")
     private byte[] contents;
 
     public Image(){
-        name = "";
+        imageName = "";
         encoding = "";
         contents = new byte[0];
     }
 
     public Image(String name, String encoding, byte[] contents){
-        this.name = name;
+        this.imageName = name;
         this.encoding = encoding;
         this.contents = contents;
     }
 
-    public String getName() {
-        return name;
+    public String getImageName() {
+        return imageName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setImageName(String name) {
+        this.imageName = name;
     }
 
     public byte[] getContents() {

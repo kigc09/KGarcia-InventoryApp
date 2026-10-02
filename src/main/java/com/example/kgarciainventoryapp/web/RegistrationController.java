@@ -3,6 +3,7 @@ package com.example.kgarciainventoryapp.web;
 import com.example.kgarciainventoryapp.Domain.Item;
 import com.example.kgarciainventoryapp.Domain.ItemDB;
 import com.example.kgarciainventoryapp.Domain.ItemType;
+import com.example.kgarciainventoryapp.services.ItemService;
 import jakarta.validation.Valid;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,9 +20,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/register")
 public class RegistrationController {
     private static final Logger logger = LoggerFactory.getLogger(RegistrationController.class);
+    private final ItemService itemService;
 
-    @Autowired
-    private ItemDB itemDB;
+    public RegistrationController(ItemService is){ itemService = is; }
 
     @ModelAttribute("pageTitle")
     public String addPageTitle(){ return "Enter Item"; }
@@ -42,16 +43,21 @@ public class RegistrationController {
     public String processItemRegister(@Valid Item item, Errors errors){
         logger.debug("Item received {}", item);
 
-
-
-        if (item.hasImage()) {
-            String imageName = item.getImage().getName();
+        /*if (item.hasImage()) {
+            String imageName = item.getImage().getImageName();
             imageName = item.getName() + imageName.substring(imageName.lastIndexOf("."));
-            item.getImage().setName(imageName);
+            item.getImage().setImageName(imageName);
         }
 
         itemDB.addItem(item);
         logger.info("Item Registered {}", item);
         return "redirect:/view/current/" + item.getId();
+
+        if(errors.hasErrors()){
+            return "itemRegistrationForm";
+        }*/
+
+        Item addedItem = itemService.registerNewItem(item);
+        return "redirect:/view/current/" + addedItem.getId();
     }
 }

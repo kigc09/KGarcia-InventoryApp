@@ -10,9 +10,9 @@ import java.util.UUID;
 @Component
 @Scope("singleton")
 public class ItemDB {
-    private Map<UUID, Item> items = new HashMap<>();
+    private Map<String, Item> items = new HashMap<>();
 
-    public Map<UUID, Item> getItems(){
+    public Map<String, Item> getItems(){
         return items;
     }
 
