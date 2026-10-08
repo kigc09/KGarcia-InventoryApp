@@ -8,6 +8,7 @@ import jakarta.validation.Valid;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
@@ -54,6 +55,7 @@ public class ItemViewController {
 
 
     @GetMapping("/current/{id}/edit")
+    @PreAuthorize("hasRole('ADMIN') or hasRole('MNGR') or hasRole('ASSOC')")
     public String viewEditItemForm(@PathVariable String id, Model model) {
         Optional<Item> item = itemService.getItemById(id);
         if (item.isEmpty()) {
@@ -82,6 +84,13 @@ public class ItemViewController {
         }
 
         itemService.updateItem(id, item);
+        return "redirect:/view/current/" + id;
+    }
+
+    @PostMapping("/current/{id}/inventory")
+    public String updateInventory(@PathVariable String id, int inventory){
+        itemService.updateInventoryLevel(id, inventory);
+
         return "redirect:/view/current/" + id;
     }
 

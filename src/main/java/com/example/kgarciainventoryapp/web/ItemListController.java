@@ -26,11 +26,12 @@ public class ItemListController {
     private ItemDB itemDB;
     */
 
+
     @ModelAttribute
     public void addItemTypeToModel(Model model){ model.addAttribute("ItemType", ItemType.values()); }
 
     @ModelAttribute("pageTitle")
-    public String addPageTitle(){return "List Animals";}
+    public String addPageTitle(){return "List Items";}
 
     /*
     @GetMapping

@@ -7,7 +7,7 @@
 <div th:replace="~{fragments :: header-nav}"></div>
 <main>
   <h2>Register Item</h2>
-  <form method="POST" th:object="${item}" enctype="multipart/form-data">
+  <form method="POST" th:object="${item}" th:action="@{/register}" enctype="multipart/form-data">
     ID:
     <input type="text" th:field="*{id}" />
     <span class="validationError"

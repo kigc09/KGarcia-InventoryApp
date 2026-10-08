@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html lang="en"
       xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head th:replace=" ~{fragments :: head}"></head>
 <body id="pageCenter">
 <div th:replace="~{fragments :: header-nav}"></div>
 <main>
+    <div class="errorMessage" role="alert" th:if="${errorMessage}" th:text="${errorMessage}">
+        Error Message
+    </div>
+    <div class="successMessage" role="status" th:if="${successMessage}" th:text="${successMessage}">
+        Success Message
+    </div>
     <aside>
         <img th:if="${current.hasImage()}" th:src="${current.image.getDataUri()}" alt="Item image."/>
         <img th:unless="${current.hasImage()}" th:src="@{/Images/NoPhotoLarge.jpg}" alt="No image provided."/>
@@ -14,14 +21,21 @@
     <h2 th:text="${current.name}">ITEM NAME</h2>
     <p>MANUFACTURER: <span th:text="${current.manufacturer}"></span></p>
     <p>PRICE: $<span  th:text="${#numbers.formatDecimal(current.price,1,2)}"></span></p>
-    <p>INVENTORY: <span  th:text="${#numbers.formatDecimal(current.inventory,1,2)}"></span></p>
+    <p>INVENTORY: <span  th:text="${current.inventory}"></span></p>
     <p>ITEM TYPE: <span th:text="${current.itemType}"></span></p>
-    <form method="GET" th:action="@{'/view/current/'+${current.id}+'/edit'}">
-        <input type="submit" value="Modify Item">
-    </form>
-    <form method="POST" th:action="@{'/view/current/'+${current.id}+'/delete'}">
-        <input type="submit" value="Delete Item">
-    </form>
+
+    <div sec:authorize="isAuthenticated()">
+        <div sec:authorize="hasRole('ADMIN') or hasRole('MNGR') or hasRole('ASSOC')">
+            <form method="GET" th:action="@{'/view/current/'+${current.id}+'/edit'}">
+                <input type="submit" value="Modify Item">
+            </form>
+            <div sec:authorize="hasRole('ADMIN') or hasRole('MNGR')">
+                <form method="POST" th:action="@{'/view/current/'+${current.id}+'/delete'}">
+                    <input type="submit" value="Delete Item">
+                </form>
+            </div>
+        </div>
+    </div>
 </main>
 <footer th:replace="~{fragments :: footer}"></footer>
 </body>

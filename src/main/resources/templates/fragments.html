@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en"
-    xmlns="http://www.w3.org/1999/xhtml"
-    xmlns:th="http://www.thymeleaf.org">
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head th:fragment="head">
     <meta charset="UTF-8">
     <title th:text="'Item Registration :: ' + ${pageTitle ?: 'Home'}"></title>
@@ -16,8 +17,17 @@
         <nav>
             <a th:href="@{/}">Home</a>
             <a th:href="@{/list}">Item List</a>
-            <a th:href="@{/register}">Register Item</a>
+            <a sec:authorize="hasAnyRole('ADMIN', 'MNGR', 'ASSOC')" th:href="@{/register}">Register Item</a>
+            <div class="header-logout">
+                <a sec:authorize="isAnonymous()" th:href="@{/login}">Login</a>
+                <form sec:authorize="isAuthenticated()" method="POST" th:action="@{/logout}">
+                    <input type="submit" value="Logout">
+                </form>
+            </div>
         </nav>
+        <div class="welcome" sec:authorize="isAuthenticated()">
+            Welcome <span sec:authentication="principal.fullname">FULLNAME</span>
+        </div>
     </div>
     <footer th:fragment="footer">
         <p>&copy; Registration 2026</p><br>

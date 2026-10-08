@@ -1,5 +1,6 @@
 package com.example.kgarciainventoryapp.services;
 
+import com.example.kgarciainventoryapp.Domain.User;
 import com.example.kgarciainventoryapp.data.ItemRepository;
 import com.example.kgarciainventoryapp.Domain.Item;
 import com.example.kgarciainventoryapp.Domain.ItemType;
@@ -7,6 +8,7 @@ import com.example.kgarciainventoryapp.web.RegistrationController;
 import jakarta.transaction.Transactional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
@@ -22,7 +24,7 @@ public class ItemService {
     public ItemService(ItemRepository ir){ itemRepo = ir;}
 
     @Transactional
-    public Item registerNewItem(Item item){
+    public Item registerNewItem(Item item, User user){
         if(item.hasImage()){
             String imageName = item.getImage().getImageName();
             imageName = item.getName() + imageName.substring(imageName.lastIndexOf("."));
@@ -66,6 +68,7 @@ public class ItemService {
     }
 
     @Transactional
+    @PreAuthorize("hasRole('ADMIN') or hasRole('MNGR')")
     public boolean updateItem(String id, Item item){
         if(!itemRepo.existsById(id)){
             logger.info("Error in saving item, ID: {} doesn't exist.", id);
@@ -76,6 +79,7 @@ public class ItemService {
         if(lookup.hasImage() && !item.hasImage()) {
             item.setImage(lookup.getImage());
         }
+
         item.setId(id);
         itemRepo.save(item);
 
@@ -84,6 +88,22 @@ public class ItemService {
     }
 
     @Transactional
+    @PreAuthorize("hasRole('ADMIN') or hasRole('MNGR') or hasRole('ASSOC')")
+    public boolean updateInventoryLevel(String id, int inventory){
+        if(!itemRepo.existsById(id)){
+            logger.info("Error in updating, ID: {} doesn't exist.", id);
+            return false;
+        }
+
+        itemRepo.updateInventoryById(id, inventory);
+
+        logger.info("Item was updated at ID: {}", id);
+
+        return true;
+    }
+
+    @Transactional
+    @PreAuthorize("hasRole('ADMIN') or hasRole('MNGR')")
     public boolean deleteItemById(String id){
         if(!itemRepo.existsById(id)){
             logger.info("Error, no item with ID: {}", id);

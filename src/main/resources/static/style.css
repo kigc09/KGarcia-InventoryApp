@@ -27,27 +27,59 @@ header h1{
 }
 
 nav{
+    display: flex;
     position: sticky;
     text-align: center;
+    align-items: center;
+    justify-content: center;
     padding: 25px;
     background-color: #4f9cda;
-    gap: 30px;
+    gap: 10px;
 }
 
 nav a{
     font-size: 1.5em;
     text-decoration: none;
     color: white;
-    margin-right: 10%;
-    margin-left: 10%;
+    margin-right: 14%;
+    margin-left: 5%;
     font-weight: bold;
+    white-space: nowrap;
 }
+
+nav form{
+    display: inline;
+}
+
+nav form input[type="submit"] {
+    background: none;
+    border: none;
+    color: #3A5B24;
+    font-size: 1.5em;
+    text-decoration: none;
+    margin-right: 5%;
+    margin-left: 5%;
+    font-weight: bold;
+    font-family: Arial, Verdana, sans-serif;
+    cursor: pointer;
+}
+
+.welcome{
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 50px;
+}
+
 main {
     overflow: hidden;
     padding: 20px;
 }
 
 main h2{
+    text-align: center;
+}
+
+.searchFilter{
     text-align: center;
 }
 

@@ -7,7 +7,7 @@
     <div th:replace="~{fragments :: header-nav}"></div>
     <main>
         <div>
-            <h3>Search or Filter Items</h3>
+            <h3 class="searchFilter">Search or Filter Items</h3>
             <form method="GET" th:action="@{/list}">
                 Name: <input type="text" name="searchName" th:value="${searchName}">
                 Type: <select name="filterType">
