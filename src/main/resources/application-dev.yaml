@@ -1,0 +1,19 @@
+spring:
+  thymeleaf:
+    cache: false
+  datasource:
+    url: "jdbc:h2:file:./data/inventory-registration;DB_CLOSE_ON_EXIT=FALSE"
+    username: admin
+    password: Inventory123
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+logging:
+  level:
+    com.example.kgarciainventoryapp: DEBUG

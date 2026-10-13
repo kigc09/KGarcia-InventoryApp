@@ -6,6 +6,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Profile;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 @SpringBootApplication
@@ -16,6 +17,7 @@ public class KGarciaInventoryAppApplication {
     }
 
     @Bean
+    @Profile("dev")
     public CommandLineRunner dataLoader(UserService userService, PasswordEncoder passwordEncoder){
         return args -> {
             userService.createUserIfMissing(new User("uTest", passwordEncoder.encode("user123"), "USER TEST", "ROLE_ADMIN"));

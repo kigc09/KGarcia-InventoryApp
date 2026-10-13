@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: KGarcia-InventoryApp
+  servlet:
+    multipart:
+      max-file-size: 5MB
+
+logging:
+  file:
+    name: logs/inventory-registration.log
+  logback:
+    rollingpolicy:
+      file-name-pattern: "logs/inventory-registration-%d{yyyy-MM-dd}.%i.log"
+      max-file-size: 10MB
+      max-history: 30
+
