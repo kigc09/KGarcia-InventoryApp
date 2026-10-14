@@ -17,3 +17,6 @@ spring:
 logging:
   level:
     com.example.kgarciainventoryapp: DEBUG
+
+animal:
+  page-size: 2

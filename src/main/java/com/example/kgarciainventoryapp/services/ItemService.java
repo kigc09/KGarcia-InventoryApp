@@ -8,6 +8,8 @@ import com.example.kgarciainventoryapp.web.RegistrationController;
 import jakarta.transaction.Transactional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
 
@@ -39,32 +41,28 @@ public class ItemService {
 
     public Optional<Item> getItemById(String  id){ return itemRepo.findById(id); }
 
-    public Map<String, Item> getAllItems() {
-        Map<String, Item> db = new HashMap<>();
-        itemRepo.findAll().forEach(item -> db.put(item.getId(), item));
-        return db;
+    public Page<Item> getAllItems(Pageable pageable) {
+        return itemRepo.findAll(pageable);
+
     }
 
 
-    public Map<String, Item> searchItems(String searchName, ItemType filterType){
-        Map<String, Item> db = new HashMap<>();
-
+    public Page<Item> searchItems(String searchName, ItemType filterType, Pageable pageable){
         boolean hasName = searchName != null && !searchName.isBlank();
         boolean hasType = filterType != null;
 
         if (hasName && hasType){
-            itemRepo.findByNameContainingIgnoreCaseAndItemType(searchName, filterType).forEach(item -> db.put(item.getId(), item));
+            return itemRepo.findByNameContainingIgnoreCaseAndItemType(searchName, filterType, pageable);
         }
         else if (hasName){
-            itemRepo.findByNameContainingIgnoreCase(searchName).forEach(item -> db.put(item.getId(), item));
+            return itemRepo.findByNameContainingIgnoreCase(searchName, pageable);
         }
         else if (hasType){
-            itemRepo.findByItemType(filterType).forEach(item -> db.put(item.getId(), item));
+            return itemRepo.findByItemType(filterType, pageable);
         }
         else {
-            return getAllItems();
+            return getAllItems(pageable);
         }
-        return db;
     }
 
     @Transactional

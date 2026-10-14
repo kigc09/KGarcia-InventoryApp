@@ -2,6 +2,8 @@ package com.example.kgarciainventoryapp.data;
 
 import com.example.kgarciainventoryapp.Domain.Item;
 import com.example.kgarciainventoryapp.Domain.ItemType;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -13,9 +15,9 @@ import java.util.List;
 import java.util.UUID;
 
 public interface ItemRepository extends JpaRepository<Item, String> {
-    List<Item> findByNameContainingIgnoreCase(String name);
-    List<Item> findByItemType(ItemType itemType);
-    List<Item> findByNameContainingIgnoreCaseAndItemType(String name, ItemType itemType);
+    Page<Item> findByNameContainingIgnoreCase(String name, Pageable pageable);
+    Page<Item> findByItemType(ItemType itemType, Pageable pageable);
+    Page<Item> findByNameContainingIgnoreCaseAndItemType(String name, ItemType itemType, Pageable pageable);
 
     @Modifying
     @Transactional

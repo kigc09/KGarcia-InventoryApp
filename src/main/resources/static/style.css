@@ -131,6 +131,26 @@ form input, form select {
     font-size: 16px;
 }
 
+.listNavigation {
+    text-align: center;
+    font-size: 1.5em;
+    text-decoration: none;
+    margin-right: 2px;
+    margin-left:2px;
+    font-weight: bold;
+}
+
+.listNavigation a:link {
+    color: #3A5B24;
+
+}
+.listNavigation a:visited {
+    color: purple;
+}
+.listNavigation a:hover{
+    color: black;
+}
+
 footer {
     bottom: 0;
     left: 0;

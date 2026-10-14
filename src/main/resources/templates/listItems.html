@@ -25,23 +25,59 @@
 
 
         <h2>Item List</h2>
-        <div th:if="${itemDB == null || itemDB.size() == 0}">
+        <div th:if="${itemDB == null || itemDB.isEmpty()}">
             <p>Empty.</p>
         </div>
 
 
 
-        <div th:unless="${itemDB == null || itemDB.size() == 0}">
-            <section th:each="entry : ${itemDB}" th:with="current=${itemDB[entry.key]}">
+        <div th:unless="${itemDB == null || itemDB.isEmpty()}">
+            <section th:each="current : ${itemDB.content}">
                 <img class="listItemImage" th:if="${current.hasImage()}" width="125" height="125"
-                    th:src="${current.image.getDataUri()}" alt="Item Image."/>
+                     th:src="${current.image.getDataUri()}" alt="Image of the pet."/>
                 <img class="listItemImage" th:unless="${current.hasImage()}" width="125" height="125"
-                    th:src="@{/Images/noimage.png}" alt="No image provided."/>
-                <br>
-                <h3><a th:href="@{'/view/current/'+${current.id}}" th:text="${current.name}">ITEM NAME</a></h3>
-                <p>ITEM TYPE: <span th:text="${current.itemType}"></span></p>
-                <p>PRICE: $<span  th:text="${#numbers.formatDecimal(current.price,1,2)}"></span></p>
+                     th:src="@{/Images/noimage.png}" alt="No image provided."/><br>
+                <h3><a th:href="@{'/view/current/'+${current.id}}" th:text="${current.name}">NAME OF THE ITEM</a></h3>
+                <p th:text="${current.itemType}">TYPE</p>
             </section>
+        </div>
+
+        <!-- display the navigation -->
+        <div class="listNavigation" th:if="${itemDB.totalPages > 1}">
+            <!-- prevous page -->
+            <a th:if="${itemDB.hasPrevious()}" th:href="@{/list(page=${itemDB.number - 1},
+                                                                  searchName=${searchName},
+                                                                  filterType=${filterType})}">
+                Prev
+            </a>
+            <!-- no previous link -->
+            <span th:unless="${itemDB.hasPrevious()}">Prev</span>
+
+            <!-- numbered list -->
+            <span th:each="pageNumber : ${#numbers.sequence(0, itemDB.totalPages - 1)}">
+                <a th:if="${pageNumber != itemDB.number}"
+                   th:href="@{/list(page=${pageNumber},
+                                           searchName=${searchName},
+                                           filterType=${filterType})}"
+                   th:text="${pageNumber + 1}"> <!-- off by one for display -->
+                    PAGENUMBER
+                </a>
+
+                <span th:unless="${pageNumber != itemDB.number}"
+                      th:text="${pageNumber + 1}">
+                    PAGENUMBER
+                </span>
+
+            </span>
+
+            <!-- next page -->
+            <a th:if="${itemDB.hasNext()}" th:href="@{/list(page=${itemDB.number + 1},
+                                                                  searchName=${searchName},
+                                                                  filterType=${filterType})}">
+                Next
+            </a>
+            <!-- no previous link -->
+            <span th:unless="${itemDB.hasNext()}">Next</span>
         </div>
     </main>
     <footer th:replace="~{fragments :: footer}"></footer>
