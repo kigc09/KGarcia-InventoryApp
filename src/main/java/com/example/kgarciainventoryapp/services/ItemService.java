@@ -1,9 +1,12 @@
 package com.example.kgarciainventoryapp.services;
 
 import com.example.kgarciainventoryapp.Domain.User;
+import com.example.kgarciainventoryapp.api.ItemPatchRequestDTO;
+import com.example.kgarciainventoryapp.api.ItemRequestMapper;
 import com.example.kgarciainventoryapp.data.ItemRepository;
 import com.example.kgarciainventoryapp.Domain.Item;
 import com.example.kgarciainventoryapp.Domain.ItemType;
+import com.example.kgarciainventoryapp.data.UserRepository;
 import com.example.kgarciainventoryapp.web.RegistrationController;
 import jakarta.transaction.Transactional;
 import org.slf4j.Logger;
@@ -13,6 +16,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
 
+import javax.swing.text.html.Option;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
@@ -22,11 +26,18 @@ import java.util.UUID;
 public class ItemService {
     private static final Logger logger = LoggerFactory.getLogger(ItemService.class);
     private final ItemRepository itemRepo;
+    private final UserRepository userRepo;
 
-    public ItemService(ItemRepository ir){ itemRepo = ir;}
+    public ItemService(ItemRepository ir, UserRepository ur){
+        itemRepo = ir;
+        userRepo = ur;
+    }
 
     @Transactional
-    public Item registerNewItem(Item item, User user){
+    public Item registerNewItem(Item item, String username){
+
+        item.setId(null);
+
         if(item.hasImage()){
             String imageName = item.getImage().getImageName();
             imageName = item.getName() + imageName.substring(imageName.lastIndexOf("."));
@@ -98,6 +109,42 @@ public class ItemService {
         logger.info("Item was updated at ID: {}", id);
 
         return true;
+    }
+
+    @Transactional
+    @PreAuthorize("hasRole('ADMIN') or hasRole('MNGR')")
+    public Optional<Item> patchUpdate(String id, ItemPatchRequestDTO requestDTO){
+        Optional<Item> lookupItem = itemRepo.findById(id);
+
+        if(lookupItem.isEmpty()){
+            return Optional.empty();
+        }
+
+        Item item = lookupItem.get();
+
+        if (requestDTO.getName() != null){
+            item.setName(requestDTO.getName());
+        }
+        if (requestDTO.getManufacturer() != null){
+            item.setManufacturer(requestDTO.getManufacturer());
+        }
+        /**
+        if (requestDTO.getPrice() != null){
+            item.setPrice(requestDTO.getPrice());
+        }
+        if (requestDTO.getInventory() != null){
+            item.setInventory(requestDTO.getInventory());
+        }**/
+        if (requestDTO.getItemType() != null){
+            item.setItemType(requestDTO.getItemType());
+        }
+        if (requestDTO.getImage() != null){
+            item.setImage(ItemRequestMapper.fromImageRequest(requestDTO.getImage()));
+        }
+
+        Item updateItem = itemRepo.save(item);
+
+        return Optional.of(updateItem);
     }
 
     @Transactional

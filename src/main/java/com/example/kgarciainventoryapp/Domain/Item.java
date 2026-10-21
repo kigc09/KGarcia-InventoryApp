@@ -2,22 +2,21 @@ package com.example.kgarciainventoryapp.Domain;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
-
-import java.util.UUID;
 
 @Entity
 public class Item {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
     @NotBlank(message = "A name is required")
     private String name;
     @NotBlank(message = "A manufacturer is required")
     private String manufacturer;
-    @NotNull(message = "Price is required")
+
     private double price;
-    @NotNull(message = "Inventory amount is required")
+
+
     private int inventory;
     @Enumerated(EnumType.STRING)
     private ItemType itemType;

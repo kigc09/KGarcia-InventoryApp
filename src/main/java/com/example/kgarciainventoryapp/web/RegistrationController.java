@@ -60,7 +60,7 @@ public class RegistrationController {
             return "itemRegistrationForm";
         }*/
 
-        Item addedItem = itemService.registerNewItem(item, user);
+        Item addedItem = itemService.registerNewItem(item, user.getUsername());
         redirectAttributes.addFlashAttribute("succesMessage", "New item added!");
         return "redirect:/view/current/" + addedItem.getId();
     }
