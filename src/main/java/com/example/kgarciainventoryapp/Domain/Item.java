@@ -13,10 +13,7 @@ public class Item {
     private String name;
     @NotBlank(message = "A manufacturer is required")
     private String manufacturer;
-
     private double price;
-
-
     private int inventory;
     @Enumerated(EnumType.STRING)
     private ItemType itemType;

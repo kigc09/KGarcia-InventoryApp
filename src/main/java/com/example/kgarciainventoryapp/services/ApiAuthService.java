@@ -4,6 +4,7 @@ import com.example.kgarciainventoryapp.Domain.ApiToken;
 import com.example.kgarciainventoryapp.Domain.User;
 import com.example.kgarciainventoryapp.api.LoginRequestDTO;
 import com.example.kgarciainventoryapp.api.TokenResponseDTO;
+import com.example.kgarciainventoryapp.api.UserRegistrationRequestDTO;
 import com.example.kgarciainventoryapp.config.JwtProperties;
 import com.example.kgarciainventoryapp.data.TokenRepository;
 import com.example.kgarciainventoryapp.data.UserRepository;
@@ -90,7 +91,6 @@ public class ApiAuthService {
         return new TokenResponseDTO(tokenValue, expiresAt);
     }
 
-    /**
     @Transactional
     public boolean revokeToken(UUID tokenId) {
         Optional<ApiToken> lookupToken = tokenRepository.findById(tokenId);
@@ -120,9 +120,9 @@ public class ApiAuthService {
 
         String encodedPassword = passwordEncoder.encode(request.getPassword());
 
-        User user = new User(username, encodedPassword, request.getFullname(),
-                request.getContact(), request.getCity(), request.getState(), request.getEmail(), "ROLE_USER");
+        User user = new User(username, request.getFullname(),
+                request.getEmail(), "ROLE_USER");
 
         return Optional.of(userRepository.save(user));
-    } **/
+    }
 }

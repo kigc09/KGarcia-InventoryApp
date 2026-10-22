@@ -412,3 +412,1060 @@ org.hibernate.id.IdentifierGenerationException: Identifier of entity 'com.exampl
 2026-10-21T17:00:07.537-05:00  INFO 9480 --- [KGarcia-InventoryApp] [http-nio-8080-exec-4] c.e.k.services.ItemService               : Item Registered Item{id=02aec2dd-74f8-49cf-87ea-6233f1856905, name='Apple Pencil Pro', price= 120.0, inventory= 5, itemType=Accessory, image=com.example.kgarciainventoryapp.Domain.Image@4f8911b}
 2026-10-21T17:08:23.843-05:00  INFO 9480 --- [KGarcia-InventoryApp] [http-nio-8080-exec-10] c.e.k.s.UserRegistrationController       : User Created: tUser
 2026-10-21T18:39:42.419-05:00  WARN 9480 --- [KGarcia-InventoryApp] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=50m19s315ms578µs).
+2026-10-21T18:59:35.615-05:00  INFO 9480 --- [KGarcia-InventoryApp] [http-nio-8080-exec-1] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 478 ms
+2026-10-21T19:26:18.704-05:00  INFO 9480 --- [KGarcia-InventoryApp] [http-nio-8080-exec-3] c.e.k.services.ItemService               : Item Registered Item{id=55aa7919-9b5f-4f4b-b574-b5d17cb5989d, name='apiString', price= 10.1, inventory= 10, itemType=Accessory, image=com.example.kgarciainventoryapp.Domain.Image@7ce6f0b9}
+2026-10-21T19:28:44.454-05:00  INFO 9480 --- [KGarcia-InventoryApp] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2026-10-21T19:28:44.462-05:00  INFO 9480 --- [KGarcia-InventoryApp] [Thread-1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-21T19:28:44.481-05:00  INFO 9480 --- [KGarcia-InventoryApp] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-21T19:28:44.491-05:00  INFO 9480 --- [KGarcia-InventoryApp] [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-21T19:28:44.496-05:00  INFO 9480 --- [KGarcia-InventoryApp] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-10-21T19:28:44.521-05:00  INFO 9480 --- [KGarcia-InventoryApp] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-10-21T19:28:44.662-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : Starting KGarciaInventoryAppApplication using Java 25.0.2 with PID 9480 (C:\Users\westh\Java III\Module 6\KGarcia-InventoryApp\target\classes started by westh in C:\Users\westh\Java III\Module 6\KGarcia-InventoryApp)
+2026-10-21T19:28:44.663-05:00 DEBUG 9480 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : Running with Spring Boot v4.1.1, Spring v7.0.9
+2026-10-21T19:28:44.663-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : The following 1 profile is active: "dev"
+2026-10-21T19:28:45.073-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-21T19:28:45.094-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 3 JPA repository interfaces.
+2026-10-21T19:28:45.302-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-21T19:28:45.305-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-21T19:28:45.305-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-21T19:28:45.351-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 684 ms
+2026-10-21T19:28:45.428-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-21T19:28:45.482-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-21T19:28:45.483-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-10-21T19:28:45.500-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn44: url=jdbc:h2:file:./data/inventory-registration user=ADMIN
+2026-10-21T19:28:45.500-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-10-21T19:28:45.501-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:file:./data/inventory-registration]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: INVENTORY-REGISTRATION/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-21T19:28:45.660-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-21T19:28:45.665-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-21T19:28:45.782-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userService
+2026-10-21T19:28:45.942-05:00  WARN 9480 --- [KGarcia-InventoryApp] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-21T19:28:46.313-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/inventory-registration'
+2026-10-21T19:28:46.343-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-21T19:28:46.346-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : Started KGarciaInventoryAppApplication in 1.731 seconds (process running for 8937.156)
+2026-10-21T19:28:46.455-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.services.UserService               : User already exists: uTest
+2026-10-21T19:28:46.543-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.services.UserService               : User already exists: mTest
+2026-10-21T19:28:46.631-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.services.UserService               : User already exists: aTest
+2026-10-21T19:28:46.707-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.services.UserService               : User already exists: uUser
+2026-10-21T19:28:46.708-05:00  WARN 9480 --- [KGarcia-InventoryApp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-21T19:28:46.708-05:00  WARN 9480 --- [KGarcia-InventoryApp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-10-21T19:28:46.710-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-21T19:28:47.756-05:00  INFO 9480 --- [KGarcia-InventoryApp] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2026-10-21T19:28:47.757-05:00  INFO 9480 --- [KGarcia-InventoryApp] [Thread-6] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-21T19:28:47.770-05:00  INFO 9480 --- [KGarcia-InventoryApp] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-21T19:28:47.774-05:00  INFO 9480 --- [KGarcia-InventoryApp] [Thread-6] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-21T19:28:47.775-05:00  INFO 9480 --- [KGarcia-InventoryApp] [Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2026-10-21T19:28:47.787-05:00  INFO 9480 --- [KGarcia-InventoryApp] [Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2026-10-21T19:28:47.903-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : Starting KGarciaInventoryAppApplication using Java 25.0.2 with PID 9480 (C:\Users\westh\Java III\Module 6\KGarcia-InventoryApp\target\classes started by westh in C:\Users\westh\Java III\Module 6\KGarcia-InventoryApp)
+2026-10-21T19:28:47.903-05:00 DEBUG 9480 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : Running with Spring Boot v4.1.1, Spring v7.0.9
+2026-10-21T19:28:47.903-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : The following 1 profile is active: "dev"
+2026-10-21T19:28:48.246-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-21T19:28:48.263-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 3 JPA repository interfaces.
+2026-10-21T19:28:48.362-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-21T19:28:48.363-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-21T19:28:48.363-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-21T19:28:48.395-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 490 ms
+2026-10-21T19:28:48.461-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-21T19:28:48.491-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-21T19:28:48.492-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2026-10-21T19:28:48.503-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection conn54: url=jdbc:h2:file:./data/inventory-registration user=ADMIN
+2026-10-21T19:28:48.505-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2026-10-21T19:28:48.505-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:file:./data/inventory-registration]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: INVENTORY-REGISTRATION/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-21T19:28:48.573-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-21T19:28:48.577-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-21T19:28:48.700-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userService
+2026-10-21T19:28:48.738-05:00  WARN 9480 --- [KGarcia-InventoryApp] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-21T19:28:48.994-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/inventory-registration'
+2026-10-21T19:28:49.014-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-21T19:28:49.015-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : Started KGarciaInventoryAppApplication in 1.148 seconds (process running for 8939.825)
+2026-10-21T19:28:49.101-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.services.UserService               : User already exists: uTest
+2026-10-21T19:28:49.172-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.services.UserService               : User already exists: mTest
+2026-10-21T19:28:49.243-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.services.UserService               : User already exists: aTest
+2026-10-21T19:28:49.312-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.services.UserService               : User already exists: uUser
+2026-10-21T19:28:49.313-05:00  WARN 9480 --- [KGarcia-InventoryApp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-21T19:28:49.313-05:00  WARN 9480 --- [KGarcia-InventoryApp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-10-21T19:28:49.313-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-21T19:28:51.466-05:00  INFO 9480 --- [KGarcia-InventoryApp] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-21T19:28:51.466-05:00  INFO 9480 --- [KGarcia-InventoryApp] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-21T19:28:51.467-05:00  INFO 9480 --- [KGarcia-InventoryApp] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-10-21T19:29:10.884-05:00  INFO 9480 --- [KGarcia-InventoryApp] [http-nio-8080-exec-3] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 140 ms
+2026-10-21T19:31:16.298-05:00  INFO 9480 --- [KGarcia-InventoryApp] [http-nio-8080-exec-2] c.e.k.services.ItemService               : Item deleted with ID: 55aa7919-9b5f-4f4b-b574-b5d17cb5989d
+2026-10-21T19:32:45.151-05:00  INFO 9480 --- [KGarcia-InventoryApp] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2026-10-21T19:32:45.152-05:00  INFO 9480 --- [KGarcia-InventoryApp] [Thread-10] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-21T19:32:45.171-05:00  INFO 9480 --- [KGarcia-InventoryApp] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-21T19:32:45.174-05:00  INFO 9480 --- [KGarcia-InventoryApp] [Thread-10] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-21T19:32:45.174-05:00  INFO 9480 --- [KGarcia-InventoryApp] [Thread-10] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2026-10-21T19:32:45.179-05:00  INFO 9480 --- [KGarcia-InventoryApp] [Thread-10] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2026-10-21T19:32:45.307-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : Starting KGarciaInventoryAppApplication using Java 25.0.2 with PID 9480 (C:\Users\westh\Java III\Module 6\KGarcia-InventoryApp\target\classes started by westh in C:\Users\westh\Java III\Module 6\KGarcia-InventoryApp)
+2026-10-21T19:32:45.307-05:00 DEBUG 9480 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : Running with Spring Boot v4.1.1, Spring v7.0.9
+2026-10-21T19:32:45.307-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : The following 1 profile is active: "dev"
+2026-10-21T19:32:45.684-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-21T19:32:45.701-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 3 JPA repository interfaces.
+2026-10-21T19:32:45.850-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-21T19:32:45.852-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-21T19:32:45.852-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-21T19:32:45.890-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 580 ms
+2026-10-21T19:32:45.992-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-21T19:32:46.033-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-21T19:32:46.034-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2026-10-21T19:32:46.048-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection conn64: url=jdbc:h2:file:./data/inventory-registration user=ADMIN
+2026-10-21T19:32:46.048-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2026-10-21T19:32:46.049-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:file:./data/inventory-registration]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: INVENTORY-REGISTRATION/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-21T19:32:46.148-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-21T19:32:46.152-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-21T19:32:46.316-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userService
+2026-10-21T19:32:46.369-05:00  WARN 9480 --- [KGarcia-InventoryApp] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-21T19:32:46.823-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/inventory-registration'
+2026-10-21T19:32:46.852-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-21T19:32:46.856-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : Started KGarciaInventoryAppApplication in 1.59 seconds (process running for 9177.665)
+2026-10-21T19:32:46.980-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.services.UserService               : User already exists: uTest
+2026-10-21T19:32:47.058-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.services.UserService               : User already exists: mTest
+2026-10-21T19:32:47.136-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.services.UserService               : User already exists: aTest
+2026-10-21T19:32:47.206-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.services.UserService               : User already exists: uUser
+2026-10-21T19:32:47.206-05:00  WARN 9480 --- [KGarcia-InventoryApp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-21T19:32:47.206-05:00  WARN 9480 --- [KGarcia-InventoryApp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-10-21T19:32:47.206-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-21T19:32:48.246-05:00  INFO 9480 --- [KGarcia-InventoryApp] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2026-10-21T19:32:48.247-05:00  INFO 9480 --- [KGarcia-InventoryApp] [Thread-14] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-21T19:32:48.262-05:00  INFO 9480 --- [KGarcia-InventoryApp] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-21T19:32:48.265-05:00  INFO 9480 --- [KGarcia-InventoryApp] [Thread-14] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-21T19:32:48.265-05:00  INFO 9480 --- [KGarcia-InventoryApp] [Thread-14] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2026-10-21T19:32:48.269-05:00  INFO 9480 --- [KGarcia-InventoryApp] [Thread-14] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2026-10-21T19:32:48.342-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : Starting KGarciaInventoryAppApplication using Java 25.0.2 with PID 9480 (C:\Users\westh\Java III\Module 6\KGarcia-InventoryApp\target\classes started by westh in C:\Users\westh\Java III\Module 6\KGarcia-InventoryApp)
+2026-10-21T19:32:48.342-05:00 DEBUG 9480 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : Running with Spring Boot v4.1.1, Spring v7.0.9
+2026-10-21T19:32:48.343-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : The following 1 profile is active: "dev"
+2026-10-21T19:32:48.577-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-21T19:32:48.589-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 3 JPA repository interfaces.
+2026-10-21T19:32:48.677-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-21T19:32:48.678-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-21T19:32:48.678-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-21T19:32:48.706-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 362 ms
+2026-10-21T19:32:48.750-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-21T19:32:48.782-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-21T19:32:48.783-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2026-10-21T19:32:48.796-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection conn74: url=jdbc:h2:file:./data/inventory-registration user=ADMIN
+2026-10-21T19:32:48.797-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2026-10-21T19:32:48.798-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:file:./data/inventory-registration]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: INVENTORY-REGISTRATION/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-21T19:32:48.887-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-21T19:32:48.892-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-21T19:32:49.054-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userService
+2026-10-21T19:32:49.118-05:00  WARN 9480 --- [KGarcia-InventoryApp] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-21T19:32:49.420-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/inventory-registration'
+2026-10-21T19:32:49.453-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-21T19:32:49.454-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : Started KGarciaInventoryAppApplication in 1.136 seconds (process running for 9180.264)
+2026-10-21T19:32:49.550-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.services.UserService               : User already exists: uTest
+2026-10-21T19:32:49.620-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.services.UserService               : User already exists: mTest
+2026-10-21T19:32:49.706-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.services.UserService               : User already exists: aTest
+2026-10-21T19:32:49.790-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.services.UserService               : User already exists: uUser
+2026-10-21T19:32:49.791-05:00  WARN 9480 --- [KGarcia-InventoryApp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-21T19:32:49.791-05:00  WARN 9480 --- [KGarcia-InventoryApp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-10-21T19:32:49.792-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-21T19:33:35.358-05:00  INFO 9480 --- [KGarcia-InventoryApp] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-21T19:33:35.358-05:00  INFO 9480 --- [KGarcia-InventoryApp] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-21T19:33:35.361-05:00  INFO 9480 --- [KGarcia-InventoryApp] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-10-21T19:45:32.586-05:00  INFO 9480 --- [KGarcia-InventoryApp] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2026-10-21T19:45:32.586-05:00  INFO 9480 --- [KGarcia-InventoryApp] [Thread-18] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-21T19:45:32.605-05:00  INFO 9480 --- [KGarcia-InventoryApp] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-21T19:45:32.609-05:00  INFO 9480 --- [KGarcia-InventoryApp] [Thread-18] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-21T19:45:32.610-05:00  INFO 9480 --- [KGarcia-InventoryApp] [Thread-18] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2026-10-21T19:45:32.622-05:00  INFO 9480 --- [KGarcia-InventoryApp] [Thread-18] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2026-10-21T19:45:32.786-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : Starting KGarciaInventoryAppApplication using Java 25.0.2 with PID 9480 (C:\Users\westh\Java III\Module 6\KGarcia-InventoryApp\target\classes started by westh in C:\Users\westh\Java III\Module 6\KGarcia-InventoryApp)
+2026-10-21T19:45:32.787-05:00 DEBUG 9480 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : Running with Spring Boot v4.1.1, Spring v7.0.9
+2026-10-21T19:45:32.787-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : The following 1 profile is active: "dev"
+2026-10-21T19:45:33.153-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-21T19:45:33.161-05:00  WARN 9480 --- [KGarcia-InventoryApp] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: java.lang.TypeNotPresentException: Type com.example.kgarciainventoryapp.Domain.Item not present
+2026-10-21T19:45:33.165-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-10-21T19:45:33.186-05:00 ERROR 9480 --- [KGarcia-InventoryApp] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.TypeNotPresentException: Type com.example.kgarciainventoryapp.Domain.Item not present
+	at java.base/sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:120) ~[na:na]
+	at java.base/sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:125) ~[na:na]
+	at java.base/sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49) ~[na:na]
+	at java.base/sun.reflect.generics.visitor.Reifier.reifyTypeArguments(Reifier.java:68) ~[na:na]
+	at java.base/sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:138) ~[na:na]
+	at java.base/sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49) ~[na:na]
+	at java.base/sun.reflect.generics.repository.ClassRepository.computeSuperInterfaces(ClassRepository.java:117) ~[na:na]
+	at java.base/sun.reflect.generics.repository.ClassRepository.getSuperInterfaces(ClassRepository.java:95) ~[na:na]
+	at java.base/java.lang.Class.getGenericInterfaces(Class.java:1278) ~[na:na]
+	at org.springframework.core.ResolvableType.getInterfaces(ResolvableType.java:544) ~[spring-core-7.0.9.jar:7.0.9]
+	at org.springframework.core.ResolvableType.as(ResolvableType.java:492) ~[spring-core-7.0.9.jar:7.0.9]
+	at org.springframework.data.core.TypeDiscoverer.getSuperTypeInformation(TypeDiscoverer.java:266) ~[spring-data-commons-4.1.1.jar:4.1.1]
+	at org.springframework.data.core.TypeInformation.getRequiredSuperTypeInformation(TypeInformation.java:328) ~[spring-data-commons-4.1.1.jar:4.1.1]
+	at org.springframework.data.repository.core.support.DefaultRepositoryMetadata.<init>(DefaultRepositoryMetadata.java:55) ~[spring-data-commons-4.1.1.jar:4.1.1]
+	at org.springframework.data.repository.core.support.AbstractRepositoryMetadata.getMetadata(AbstractRepositoryMetadata.java:79) ~[spring-data-commons-4.1.1.jar:4.1.1]
+	at org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport.getRepositoryConfigurations(RepositoryConfigurationExtensionSupport.java:93) ~[spring-data-commons-4.1.1.jar:4.1.1]
+	at org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:170) ~[spring-data-commons-4.1.1.jar:4.1.1]
+	at org.springframework.boot.autoconfigure.data.AbstractRepositoryConfigurationSourceSupport.registerBeanDefinitions(AbstractRepositoryConfigurationSourceSupport.java:67) ~[spring-boot-autoconfigure-4.1.1.jar:4.1.1]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.lambda$loadBeanDefinitionsFromImportBeanDefinitionRegistrars$0(ConfigurationClassBeanDefinitionReader.java:422) ~[spring-context-7.0.9.jar:7.0.9]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:987) ~[na:na]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsFromImportBeanDefinitionRegistrars(ConfigurationClassBeanDefinitionReader.java:421) ~[spring-context-7.0.9.jar:7.0.9]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:152) ~[spring-context-7.0.9.jar:7.0.9]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:124) ~[spring-context-7.0.9.jar:7.0.9]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:464) ~[spring-context-7.0.9.jar:7.0.9]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:316) ~[spring-context-7.0.9.jar:7.0.9]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-7.0.9.jar:7.0.9]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-7.0.9.jar:7.0.9]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:795) ~[spring-context-7.0.9.jar:7.0.9]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:603) ~[spring-context-7.0.9.jar:7.0.9]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.1.1.jar:4.1.1]
+	at com.example.kgarciainventoryapp.KGarciaInventoryAppApplication.main(KGarciaInventoryAppApplication.java:19) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.1.1.jar:4.1.1]
+Caused by: java.lang.ClassNotFoundException: com.example.kgarciainventoryapp.Domain.Item
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:580) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:490) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:547) ~[na:na]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:123) ~[spring-boot-devtools-4.1.1.jar:4.1.1]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:490) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:547) ~[na:na]
+	at java.base/sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:117) ~[na:na]
+	... 38 common frames omitted
+
+2026-10-21T19:45:34.678-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : Starting KGarciaInventoryAppApplication using Java 25.0.2 with PID 9480 (C:\Users\westh\Java III\Module 6\KGarcia-InventoryApp\target\classes started by westh in C:\Users\westh\Java III\Module 6\KGarcia-InventoryApp)
+2026-10-21T19:45:34.678-05:00 DEBUG 9480 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : Running with Spring Boot v4.1.1, Spring v7.0.9
+2026-10-21T19:45:34.678-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : The following 1 profile is active: "dev"
+2026-10-21T19:45:35.060-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-21T19:45:35.082-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 3 JPA repository interfaces.
+2026-10-21T19:45:35.273-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-21T19:45:35.276-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-21T19:45:35.276-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-21T19:45:35.319-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 639 ms
+2026-10-21T19:45:35.410-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-21T19:45:35.459-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-21T19:45:35.461-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2026-10-21T19:45:35.485-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection conn84: url=jdbc:h2:file:./data/inventory-registration user=ADMIN
+2026-10-21T19:45:35.485-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2026-10-21T19:45:35.486-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:file:./data/inventory-registration]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: INVENTORY-REGISTRATION/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-21T19:45:35.599-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-21T19:45:35.602-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-21T19:45:35.743-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userService
+2026-10-21T19:45:35.845-05:00  WARN 9480 --- [KGarcia-InventoryApp] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-21T19:45:36.396-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/inventory-registration'
+2026-10-21T19:45:36.420-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-21T19:45:36.424-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : Started KGarciaInventoryAppApplication in 1.776 seconds (process running for 9947.234)
+2026-10-21T19:45:36.529-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.services.UserService               : User already exists: uTest
+2026-10-21T19:45:36.600-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.services.UserService               : User already exists: mTest
+2026-10-21T19:45:36.674-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.services.UserService               : User already exists: aTest
+2026-10-21T19:45:36.741-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.services.UserService               : User already exists: uUser
+2026-10-21T19:45:36.742-05:00  WARN 9480 --- [KGarcia-InventoryApp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-21T19:45:36.742-05:00  WARN 9480 --- [KGarcia-InventoryApp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-10-21T19:45:36.742-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-21T19:48:48.941-05:00  INFO 9480 --- [KGarcia-InventoryApp] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2026-10-21T19:48:48.942-05:00  INFO 9480 --- [KGarcia-InventoryApp] [Thread-22] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-21T19:48:48.961-05:00  INFO 9480 --- [KGarcia-InventoryApp] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-21T19:48:48.963-05:00  INFO 9480 --- [KGarcia-InventoryApp] [Thread-22] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-21T19:48:48.964-05:00  INFO 9480 --- [KGarcia-InventoryApp] [Thread-22] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2026-10-21T19:48:48.990-05:00  INFO 9480 --- [KGarcia-InventoryApp] [Thread-22] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2026-10-21T19:48:49.114-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : Starting KGarciaInventoryAppApplication using Java 25.0.2 with PID 9480 (C:\Users\westh\Java III\Module 6\KGarcia-InventoryApp\target\classes started by westh in C:\Users\westh\Java III\Module 6\KGarcia-InventoryApp)
+2026-10-21T19:48:49.114-05:00 DEBUG 9480 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : Running with Spring Boot v4.1.1, Spring v7.0.9
+2026-10-21T19:48:49.114-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : The following 1 profile is active: "dev"
+2026-10-21T19:48:49.604-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-21T19:48:49.627-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 3 JPA repository interfaces.
+2026-10-21T19:48:50.090-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-21T19:48:50.094-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-21T19:48:50.094-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-21T19:48:50.138-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1020 ms
+2026-10-21T19:48:50.237-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-21T19:48:50.293-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-21T19:48:50.294-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2026-10-21T19:48:50.314-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Added connection conn94: url=jdbc:h2:file:./data/inventory-registration user=ADMIN
+2026-10-21T19:48:50.314-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2026-10-21T19:48:50.315-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:file:./data/inventory-registration]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: INVENTORY-REGISTRATION/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-21T19:48:50.406-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-21T19:48:50.411-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-21T19:48:50.613-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userService
+2026-10-21T19:48:50.682-05:00  WARN 9480 --- [KGarcia-InventoryApp] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-21T19:48:51.238-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/inventory-registration'
+2026-10-21T19:48:51.278-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-21T19:48:51.281-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : Started KGarciaInventoryAppApplication in 2.209 seconds (process running for 10142.09)
+2026-10-21T19:48:51.384-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.services.UserService               : User already exists: uTest
+2026-10-21T19:48:51.475-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.services.UserService               : User already exists: mTest
+2026-10-21T19:48:51.576-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.services.UserService               : User already exists: aTest
+2026-10-21T19:48:51.665-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.services.UserService               : User already exists: uUser
+2026-10-21T19:48:51.666-05:00  WARN 9480 --- [KGarcia-InventoryApp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-21T19:48:51.666-05:00  WARN 9480 --- [KGarcia-InventoryApp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-10-21T19:48:51.667-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-21T19:50:11.980-05:00  INFO 9480 --- [KGarcia-InventoryApp] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2026-10-21T19:50:11.982-05:00  INFO 9480 --- [KGarcia-InventoryApp] [Thread-29] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-21T19:50:12.000-05:00  INFO 9480 --- [KGarcia-InventoryApp] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-21T19:50:12.003-05:00  INFO 9480 --- [KGarcia-InventoryApp] [Thread-29] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-21T19:50:12.006-05:00  INFO 9480 --- [KGarcia-InventoryApp] [Thread-29] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2026-10-21T19:50:12.010-05:00  INFO 9480 --- [KGarcia-InventoryApp] [Thread-29] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2026-10-21T19:50:12.154-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : Starting KGarciaInventoryAppApplication using Java 25.0.2 with PID 9480 (C:\Users\westh\Java III\Module 6\KGarcia-InventoryApp\target\classes started by westh in C:\Users\westh\Java III\Module 6\KGarcia-InventoryApp)
+2026-10-21T19:50:12.154-05:00 DEBUG 9480 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : Running with Spring Boot v4.1.1, Spring v7.0.9
+2026-10-21T19:50:12.154-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : The following 1 profile is active: "dev"
+2026-10-21T19:50:12.542-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-21T19:50:12.561-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 3 JPA repository interfaces.
+2026-10-21T19:50:12.683-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-21T19:50:12.683-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-21T19:50:12.684-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-21T19:50:12.732-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 575 ms
+2026-10-21T19:50:12.841-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-21T19:50:12.899-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-21T19:50:12.900-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2026-10-21T19:50:12.928-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-8 - Added connection conn104: url=jdbc:h2:file:./data/inventory-registration user=ADMIN
+2026-10-21T19:50:12.928-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2026-10-21T19:50:12.929-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:file:./data/inventory-registration]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: INVENTORY-REGISTRATION/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-21T19:50:13.061-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-21T19:50:13.068-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-21T19:50:13.281-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userService
+2026-10-21T19:50:13.315-05:00  WARN 9480 --- [KGarcia-InventoryApp] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-21T19:50:13.835-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/inventory-registration'
+2026-10-21T19:50:13.869-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-21T19:50:13.872-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : Started KGarciaInventoryAppApplication in 1.753 seconds (process running for 10224.681)
+2026-10-21T19:50:13.992-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.services.UserService               : User already exists: uTest
+2026-10-21T19:50:14.073-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.services.UserService               : User already exists: mTest
+2026-10-21T19:50:14.153-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.services.UserService               : User already exists: aTest
+2026-10-21T19:50:14.249-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.services.UserService               : User already exists: uUser
+2026-10-21T19:50:14.249-05:00  WARN 9480 --- [KGarcia-InventoryApp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-21T19:50:14.249-05:00  WARN 9480 --- [KGarcia-InventoryApp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-10-21T19:50:14.250-05:00  INFO 9480 --- [KGarcia-InventoryApp] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-21T19:50:44.698-05:00  INFO 9480 --- [KGarcia-InventoryApp] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-21T19:50:44.711-05:00  INFO 9480 --- [KGarcia-InventoryApp] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-21T19:50:44.715-05:00  INFO 9480 --- [KGarcia-InventoryApp] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-21T19:50:44.715-05:00  INFO 9480 --- [KGarcia-InventoryApp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2026-10-21T19:50:44.718-05:00  INFO 9480 --- [KGarcia-InventoryApp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+2026-10-21T19:50:50.525-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : Starting KGarciaInventoryAppApplication using Java 25.0.2 with PID 17300 (C:\Users\westh\Java III\Module 6\KGarcia-InventoryApp\target\classes started by westh in C:\Users\westh\Java III\Module 6\KGarcia-InventoryApp)
+2026-10-21T19:50:50.527-05:00 DEBUG 17300 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : Running with Spring Boot v4.1.1, Spring v7.0.9
+2026-10-21T19:50:50.528-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : The following 1 profile is active: "dev"
+2026-10-21T19:50:50.597-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-10-21T19:50:50.597-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-10-21T19:50:51.870-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-21T19:50:51.924-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45 ms. Found 3 JPA repository interfaces.
+2026-10-21T19:50:52.555-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-21T19:50:52.568-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-21T19:50:52.568-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-21T19:50:52.642-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2044 ms
+2026-10-21T19:50:52.869-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-21T19:50:52.937-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-10-21T19:50:53.438-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-21T19:50:53.472-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-21T19:50:53.728-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./data/inventory-registration user=ADMIN
+2026-10-21T19:50:53.730-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-21T19:50:53.790-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:file:./data/inventory-registration]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: INVENTORY-REGISTRATION/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-21T19:50:54.855-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-21T19:50:54.911-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-21T19:50:55.009-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-10-21T19:50:55.853-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userService
+2026-10-21T19:50:56.082-05:00  WARN 17300 --- [KGarcia-InventoryApp] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-21T19:50:57.146-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/inventory-registration'
+2026-10-21T19:50:57.201-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-21T19:50:57.207-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : Started KGarciaInventoryAppApplication in 7.295 seconds (process running for 8.268)
+2026-10-21T19:50:57.416-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.services.UserService               : User already exists: uTest
+2026-10-21T19:50:57.489-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.services.UserService               : User already exists: mTest
+2026-10-21T19:50:57.556-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.services.UserService               : User already exists: aTest
+2026-10-21T19:50:57.632-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.services.UserService               : User already exists: uUser
+2026-10-21T19:50:57.632-05:00  WARN 17300 --- [KGarcia-InventoryApp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-21T19:50:57.633-05:00  WARN 17300 --- [KGarcia-InventoryApp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-10-21T19:51:04.450-05:00  INFO 17300 --- [KGarcia-InventoryApp] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-21T19:51:04.450-05:00  INFO 17300 --- [KGarcia-InventoryApp] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-21T19:51:04.452-05:00  INFO 17300 --- [KGarcia-InventoryApp] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-10-21T19:51:05.397-05:00  INFO 17300 --- [KGarcia-InventoryApp] [http-nio-8080-exec-9] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 408 ms
+2026-10-21T19:53:06.082-05:00  INFO 17300 --- [KGarcia-InventoryApp] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2026-10-21T19:53:06.087-05:00  INFO 17300 --- [KGarcia-InventoryApp] [Thread-1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-21T19:53:06.106-05:00  INFO 17300 --- [KGarcia-InventoryApp] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-21T19:53:06.116-05:00  INFO 17300 --- [KGarcia-InventoryApp] [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-21T19:53:06.122-05:00  INFO 17300 --- [KGarcia-InventoryApp] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-10-21T19:53:06.632-05:00  INFO 17300 --- [KGarcia-InventoryApp] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-10-21T19:53:06.775-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : Starting KGarciaInventoryAppApplication using Java 25.0.2 with PID 17300 (C:\Users\westh\Java III\Module 6\KGarcia-InventoryApp\target\classes started by westh in C:\Users\westh\Java III\Module 6\KGarcia-InventoryApp)
+2026-10-21T19:53:06.776-05:00 DEBUG 17300 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : Running with Spring Boot v4.1.1, Spring v7.0.9
+2026-10-21T19:53:06.776-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : The following 1 profile is active: "dev"
+2026-10-21T19:53:07.252-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-21T19:53:07.284-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29 ms. Found 3 JPA repository interfaces.
+2026-10-21T19:53:07.543-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-21T19:53:07.546-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-21T19:53:07.546-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-21T19:53:07.586-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 808 ms
+2026-10-21T19:53:07.701-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-21T19:53:07.764-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-21T19:53:07.766-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-10-21T19:53:07.787-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:file:./data/inventory-registration user=ADMIN
+2026-10-21T19:53:07.788-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-10-21T19:53:07.789-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:file:./data/inventory-registration]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: INVENTORY-REGISTRATION/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-21T19:53:07.912-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-21T19:53:07.920-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-21T19:53:08.119-05:00  WARN 17300 --- [KGarcia-InventoryApp] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'apiAuthController': Resolution of declared constructors on bean Class [com.example.kgarciainventoryapp.security.ApiAuthController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@6d82d98e] failed
+2026-10-21T19:53:08.120-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-21T19:53:08.120-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2026-10-21T19:53:08.131-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2026-10-21T19:53:08.134-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-10-21T19:53:08.148-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-10-21T19:53:08.201-05:00 ERROR 17300 --- [KGarcia-InventoryApp] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'apiAuthController': Resolution of declared constructors on bean Class [com.example.kgarciainventoryapp.security.ApiAuthController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@6d82d98e] failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:368) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1319) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1216) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1225) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1191) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1121) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:994) ~[spring-context-7.0.9.jar:7.0.9]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.9.jar:7.0.9]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.1.1.jar:4.1.1]
+	at com.example.kgarciainventoryapp.KGarciaInventoryAppApplication.main(KGarciaInventoryAppApplication.java:19) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.1.1.jar:4.1.1]
+Caused by: java.lang.NoClassDefFoundError: com/example/kgarciainventoryapp/services/ApiAuthService
+	at java.base/java.lang.Class.getDeclaredConstructors0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredConstructors(Class.java:2985) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredConstructors(Class.java:2354) ~[na:na]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:363) ~[spring-beans-7.0.9.jar:7.0.9]
+	... 23 common frames omitted
+Caused by: java.lang.ClassNotFoundException: com.example.kgarciainventoryapp.services.ApiAuthService
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:580) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:490) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:547) ~[na:na]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:123) ~[spring-boot-devtools-4.1.1.jar:4.1.1]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:490) ~[na:na]
+	... 27 common frames omitted
+
+2026-10-21T19:53:20.967-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : Starting KGarciaInventoryAppApplication using Java 25.0.2 with PID 17300 (C:\Users\westh\Java III\Module 6\KGarcia-InventoryApp\target\classes started by westh in C:\Users\westh\Java III\Module 6\KGarcia-InventoryApp)
+2026-10-21T19:53:20.968-05:00 DEBUG 17300 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : Running with Spring Boot v4.1.1, Spring v7.0.9
+2026-10-21T19:53:20.968-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : The following 1 profile is active: "dev"
+2026-10-21T19:53:21.268-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-21T19:53:21.286-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 3 JPA repository interfaces.
+2026-10-21T19:53:21.405-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-21T19:53:21.406-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-21T19:53:21.406-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-21T19:53:21.444-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 474 ms
+2026-10-21T19:53:21.529-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-21T19:53:21.571-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-21T19:53:21.573-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2026-10-21T19:53:21.588-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection conn18: url=jdbc:h2:file:./data/inventory-registration user=ADMIN
+2026-10-21T19:53:21.589-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2026-10-21T19:53:21.589-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:file:./data/inventory-registration]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: INVENTORY-REGISTRATION/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-21T19:53:21.672-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-21T19:53:21.677-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-21T19:53:21.924-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userService
+2026-10-21T19:53:22.041-05:00  WARN 17300 --- [KGarcia-InventoryApp] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-21T19:53:22.592-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/inventory-registration'
+2026-10-21T19:53:22.629-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-21T19:53:22.632-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : Started KGarciaInventoryAppApplication in 1.708 seconds (process running for 153.694)
+2026-10-21T19:53:22.747-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.services.UserService               : User already exists: uTest
+2026-10-21T19:53:22.833-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.services.UserService               : User already exists: mTest
+2026-10-21T19:53:22.919-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.services.UserService               : User already exists: aTest
+2026-10-21T19:53:23.005-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.services.UserService               : User already exists: uUser
+2026-10-21T19:53:23.005-05:00  WARN 17300 --- [KGarcia-InventoryApp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-21T19:53:23.005-05:00  WARN 17300 --- [KGarcia-InventoryApp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-10-21T19:53:23.007-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-21T20:01:24.708-05:00  INFO 17300 --- [KGarcia-InventoryApp] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 4 class path changes (4 additions, 0 deletions, 0 modifications)
+2026-10-21T20:01:24.711-05:00  INFO 17300 --- [KGarcia-InventoryApp] [Thread-6] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-21T20:01:24.735-05:00  INFO 17300 --- [KGarcia-InventoryApp] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-21T20:01:24.737-05:00  INFO 17300 --- [KGarcia-InventoryApp] [Thread-6] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-21T20:01:24.738-05:00  INFO 17300 --- [KGarcia-InventoryApp] [Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2026-10-21T20:01:24.741-05:00  INFO 17300 --- [KGarcia-InventoryApp] [Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2026-10-21T20:01:24.869-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : Starting KGarciaInventoryAppApplication using Java 25.0.2 with PID 17300 (C:\Users\westh\Java III\Module 6\KGarcia-InventoryApp\target\classes started by westh in C:\Users\westh\Java III\Module 6\KGarcia-InventoryApp)
+2026-10-21T20:01:24.869-05:00 DEBUG 17300 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : Running with Spring Boot v4.1.1, Spring v7.0.9
+2026-10-21T20:01:24.869-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : The following 1 profile is active: "dev"
+2026-10-21T20:01:25.374-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-21T20:01:25.397-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 3 JPA repository interfaces.
+2026-10-21T20:01:25.734-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-21T20:01:25.740-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-21T20:01:25.740-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-21T20:01:25.833-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 962 ms
+2026-10-21T20:01:25.995-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-21T20:01:26.073-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-21T20:01:26.077-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2026-10-21T20:01:26.110-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection conn28: url=jdbc:h2:file:./data/inventory-registration user=ADMIN
+2026-10-21T20:01:26.110-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2026-10-21T20:01:26.112-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:file:./data/inventory-registration]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: INVENTORY-REGISTRATION/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-21T20:01:26.351-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-21T20:01:26.363-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-21T20:01:26.505-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userService
+2026-10-21T20:01:26.566-05:00  WARN 17300 --- [KGarcia-InventoryApp] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-21T20:01:26.905-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/inventory-registration'
+2026-10-21T20:01:26.928-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-21T20:01:26.930-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : Started KGarciaInventoryAppApplication in 2.096 seconds (process running for 637.991)
+2026-10-21T20:01:27.034-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.services.UserService               : User already exists: uTest
+2026-10-21T20:01:27.110-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.services.UserService               : User already exists: mTest
+2026-10-21T20:01:27.201-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.services.UserService               : User already exists: aTest
+2026-10-21T20:01:27.304-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.services.UserService               : User already exists: uUser
+2026-10-21T20:01:27.304-05:00  WARN 17300 --- [KGarcia-InventoryApp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-21T20:01:27.305-05:00  WARN 17300 --- [KGarcia-InventoryApp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-10-21T20:01:27.307-05:00  INFO 17300 --- [KGarcia-InventoryApp] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-21T20:01:47.274-05:00  INFO 17300 --- [KGarcia-InventoryApp] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-21T20:01:47.291-05:00  INFO 17300 --- [KGarcia-InventoryApp] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-21T20:01:47.296-05:00  INFO 17300 --- [KGarcia-InventoryApp] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-21T20:01:47.297-05:00  INFO 17300 --- [KGarcia-InventoryApp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2026-10-21T20:01:47.303-05:00  INFO 17300 --- [KGarcia-InventoryApp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2026-10-21T20:01:49.874-05:00  INFO 7124 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : Starting KGarciaInventoryAppApplication using Java 25.0.2 with PID 7124 (C:\Users\westh\Java III\Module 6\KGarcia-InventoryApp\target\classes started by westh in C:\Users\westh\Java III\Module 6\KGarcia-InventoryApp)
+2026-10-21T20:01:49.877-05:00 DEBUG 7124 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : Running with Spring Boot v4.1.1, Spring v7.0.9
+2026-10-21T20:01:49.877-05:00  INFO 7124 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : The following 1 profile is active: "dev"
+2026-10-21T20:01:49.919-05:00  INFO 7124 --- [KGarcia-InventoryApp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-10-21T20:01:49.919-05:00  INFO 7124 --- [KGarcia-InventoryApp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-10-21T20:01:50.798-05:00  INFO 7124 --- [KGarcia-InventoryApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-21T20:01:50.868-05:00  INFO 7124 --- [KGarcia-InventoryApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 61 ms. Found 3 JPA repository interfaces.
+2026-10-21T20:01:51.621-05:00  INFO 7124 --- [KGarcia-InventoryApp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-21T20:01:51.637-05:00  INFO 7124 --- [KGarcia-InventoryApp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-21T20:01:51.637-05:00  INFO 7124 --- [KGarcia-InventoryApp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-21T20:01:51.716-05:00  INFO 7124 --- [KGarcia-InventoryApp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1796 ms
+2026-10-21T20:01:52.063-05:00  INFO 7124 --- [KGarcia-InventoryApp] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-21T20:01:52.183-05:00  INFO 7124 --- [KGarcia-InventoryApp] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-10-21T20:01:52.750-05:00  INFO 7124 --- [KGarcia-InventoryApp] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-21T20:01:52.789-05:00  INFO 7124 --- [KGarcia-InventoryApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-21T20:01:53.053-05:00  INFO 7124 --- [KGarcia-InventoryApp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./data/inventory-registration user=ADMIN
+2026-10-21T20:01:53.056-05:00  INFO 7124 --- [KGarcia-InventoryApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-21T20:01:53.135-05:00  INFO 7124 --- [KGarcia-InventoryApp] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:file:./data/inventory-registration]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: INVENTORY-REGISTRATION/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-21T20:01:54.101-05:00  INFO 7124 --- [KGarcia-InventoryApp] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-21T20:01:54.151-05:00  INFO 7124 --- [KGarcia-InventoryApp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-21T20:01:54.234-05:00  INFO 7124 --- [KGarcia-InventoryApp] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-10-21T20:01:54.908-05:00  INFO 7124 --- [KGarcia-InventoryApp] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userService
+2026-10-21T20:01:55.096-05:00  WARN 7124 --- [KGarcia-InventoryApp] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-21T20:01:55.791-05:00  INFO 7124 --- [KGarcia-InventoryApp] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/inventory-registration'
+2026-10-21T20:01:55.853-05:00  INFO 7124 --- [KGarcia-InventoryApp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-21T20:01:55.858-05:00  INFO 7124 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : Started KGarciaInventoryAppApplication in 6.51 seconds (process running for 7.396)
+2026-10-21T20:01:56.061-05:00  INFO 7124 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.services.UserService               : User already exists: uTest
+2026-10-21T20:01:56.134-05:00  INFO 7124 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.services.UserService               : User already exists: mTest
+2026-10-21T20:01:56.201-05:00  INFO 7124 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.services.UserService               : User already exists: aTest
+2026-10-21T20:01:56.269-05:00  INFO 7124 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.services.UserService               : User already exists: uUser
+2026-10-21T20:01:56.270-05:00  WARN 7124 --- [KGarcia-InventoryApp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-21T20:01:56.270-05:00  WARN 7124 --- [KGarcia-InventoryApp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-10-21T20:02:12.481-05:00  INFO 7124 --- [KGarcia-InventoryApp] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-21T20:02:12.482-05:00  INFO 7124 --- [KGarcia-InventoryApp] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-21T20:02:12.483-05:00  INFO 7124 --- [KGarcia-InventoryApp] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-10-21T20:02:13.218-05:00  INFO 7124 --- [KGarcia-InventoryApp] [http-nio-8080-exec-5] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 399 ms
+2026-10-21T20:09:22.142-05:00  WARN 7124 --- [KGarcia-InventoryApp] [http-nio-8080-exec-2] ration$PageModule$WarningLoggingModifier : Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2026-10-21T20:59:30.024-05:00  INFO 7124 --- [KGarcia-InventoryApp] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2026-10-21T20:59:30.059-05:00  INFO 7124 --- [KGarcia-InventoryApp] [Thread-1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-21T20:59:30.082-05:00  INFO 7124 --- [KGarcia-InventoryApp] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-21T20:59:30.103-05:00  INFO 7124 --- [KGarcia-InventoryApp] [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-21T20:59:30.122-05:00  INFO 7124 --- [KGarcia-InventoryApp] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-10-21T20:59:30.171-05:00  INFO 7124 --- [KGarcia-InventoryApp] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-10-21T20:59:30.427-05:00  INFO 7124 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : Starting KGarciaInventoryAppApplication using Java 25.0.2 with PID 7124 (C:\Users\westh\Java III\Module 6\KGarcia-InventoryApp\target\classes started by westh in C:\Users\westh\Java III\Module 6\KGarcia-InventoryApp)
+2026-10-21T20:59:30.428-05:00 DEBUG 7124 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : Running with Spring Boot v4.1.1, Spring v7.0.9
+2026-10-21T20:59:30.428-05:00  INFO 7124 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : The following 1 profile is active: "dev"
+2026-10-21T20:59:30.909-05:00  INFO 7124 --- [KGarcia-InventoryApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-21T20:59:30.932-05:00  INFO 7124 --- [KGarcia-InventoryApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 3 JPA repository interfaces.
+2026-10-21T20:59:31.265-05:00  INFO 7124 --- [KGarcia-InventoryApp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-21T20:59:31.270-05:00  INFO 7124 --- [KGarcia-InventoryApp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-21T20:59:31.270-05:00  INFO 7124 --- [KGarcia-InventoryApp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-21T20:59:31.371-05:00  INFO 7124 --- [KGarcia-InventoryApp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 937 ms
+2026-10-21T20:59:31.525-05:00  INFO 7124 --- [KGarcia-InventoryApp] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-21T20:59:31.612-05:00  INFO 7124 --- [KGarcia-InventoryApp] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-21T20:59:31.617-05:00  INFO 7124 --- [KGarcia-InventoryApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-10-21T20:59:31.649-05:00  INFO 7124 --- [KGarcia-InventoryApp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn30: url=jdbc:h2:file:./data/inventory-registration user=ADMIN
+2026-10-21T20:59:31.650-05:00  INFO 7124 --- [KGarcia-InventoryApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-10-21T20:59:31.659-05:00  INFO 7124 --- [KGarcia-InventoryApp] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:file:./data/inventory-registration]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: INVENTORY-REGISTRATION/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-21T20:59:31.985-05:00  INFO 7124 --- [KGarcia-InventoryApp] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-21T20:59:31.997-05:00  INFO 7124 --- [KGarcia-InventoryApp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-21T20:59:32.069-05:00  WARN 7124 --- [KGarcia-InventoryApp] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'itemRestController': Resolution of declared constructors on bean Class [com.example.kgarciainventoryapp.api.ItemRestController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@5f4be2fc] failed
+2026-10-21T20:59:32.070-05:00  INFO 7124 --- [KGarcia-InventoryApp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-21T20:59:32.072-05:00  INFO 7124 --- [KGarcia-InventoryApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2026-10-21T20:59:32.127-05:00  INFO 7124 --- [KGarcia-InventoryApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2026-10-21T20:59:32.128-05:00  INFO 7124 --- [KGarcia-InventoryApp] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-10-21T20:59:32.152-05:00  INFO 7124 --- [KGarcia-InventoryApp] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-10-21T20:59:32.248-05:00 ERROR 7124 --- [KGarcia-InventoryApp] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'itemRestController': Resolution of declared constructors on bean Class [com.example.kgarciainventoryapp.api.ItemRestController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@5f4be2fc] failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:368) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1319) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1216) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1225) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1191) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1121) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:994) ~[spring-context-7.0.9.jar:7.0.9]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.9.jar:7.0.9]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.1.1.jar:4.1.1]
+	at com.example.kgarciainventoryapp.KGarciaInventoryAppApplication.main(KGarciaInventoryAppApplication.java:19) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.1.1.jar:4.1.1]
+Caused by: java.lang.NoClassDefFoundError: com/example/kgarciainventoryapp/services/ItemService
+	at java.base/java.lang.Class.getDeclaredConstructors0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredConstructors(Class.java:2985) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredConstructors(Class.java:2354) ~[na:na]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:363) ~[spring-beans-7.0.9.jar:7.0.9]
+	... 23 common frames omitted
+Caused by: java.lang.ClassNotFoundException: com.example.kgarciainventoryapp.services.ItemService
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:580) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:490) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:547) ~[na:na]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:123) ~[spring-boot-devtools-4.1.1.jar:4.1.1]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:490) ~[na:na]
+	... 27 common frames omitted
+
+2026-10-21T21:03:20.957-05:00  INFO 30156 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : Starting KGarciaInventoryAppApplication using Java 25.0.2 with PID 30156 (C:\Users\westh\Java III\Module 6\KGarcia-InventoryApp\target\classes started by westh in C:\Users\westh\Java III\Module 6\KGarcia-InventoryApp)
+2026-10-21T21:03:20.959-05:00 DEBUG 30156 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : Running with Spring Boot v4.1.1, Spring v7.0.9
+2026-10-21T21:03:20.959-05:00  INFO 30156 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : The following 1 profile is active: "dev"
+2026-10-21T21:03:21.018-05:00  INFO 30156 --- [KGarcia-InventoryApp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-10-21T21:03:21.019-05:00  INFO 30156 --- [KGarcia-InventoryApp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-10-21T21:03:22.045-05:00  INFO 30156 --- [KGarcia-InventoryApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-21T21:03:22.106-05:00  INFO 30156 --- [KGarcia-InventoryApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52 ms. Found 3 JPA repository interfaces.
+2026-10-21T21:03:22.800-05:00  INFO 30156 --- [KGarcia-InventoryApp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-21T21:03:22.817-05:00  INFO 30156 --- [KGarcia-InventoryApp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-21T21:03:22.817-05:00  INFO 30156 --- [KGarcia-InventoryApp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-21T21:03:22.881-05:00  INFO 30156 --- [KGarcia-InventoryApp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1861 ms
+2026-10-21T21:03:23.130-05:00  INFO 30156 --- [KGarcia-InventoryApp] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-21T21:03:23.203-05:00  INFO 30156 --- [KGarcia-InventoryApp] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-10-21T21:03:23.734-05:00  INFO 30156 --- [KGarcia-InventoryApp] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-21T21:03:23.771-05:00  INFO 30156 --- [KGarcia-InventoryApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-21T21:03:24.034-05:00  INFO 30156 --- [KGarcia-InventoryApp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./data/inventory-registration user=ADMIN
+2026-10-21T21:03:24.037-05:00  INFO 30156 --- [KGarcia-InventoryApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-21T21:03:24.122-05:00  INFO 30156 --- [KGarcia-InventoryApp] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:file:./data/inventory-registration]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: INVENTORY-REGISTRATION/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-21T21:03:25.249-05:00  INFO 30156 --- [KGarcia-InventoryApp] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-21T21:03:25.313-05:00  INFO 30156 --- [KGarcia-InventoryApp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-21T21:03:25.416-05:00  INFO 30156 --- [KGarcia-InventoryApp] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-10-21T21:03:26.179-05:00  INFO 30156 --- [KGarcia-InventoryApp] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userService
+2026-10-21T21:03:26.403-05:00  WARN 30156 --- [KGarcia-InventoryApp] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-21T21:03:27.268-05:00  INFO 30156 --- [KGarcia-InventoryApp] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/inventory-registration'
+2026-10-21T21:03:27.347-05:00  INFO 30156 --- [KGarcia-InventoryApp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-21T21:03:27.353-05:00  INFO 30156 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : Started KGarciaInventoryAppApplication in 6.943 seconds (process running for 7.919)
+2026-10-21T21:03:27.611-05:00  INFO 30156 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.services.UserService               : User already exists: uTest
+2026-10-21T21:03:27.684-05:00  INFO 30156 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.services.UserService               : User already exists: mTest
+2026-10-21T21:03:27.754-05:00  INFO 30156 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.services.UserService               : User already exists: aTest
+2026-10-21T21:03:27.836-05:00  INFO 30156 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.services.UserService               : User already exists: uUser
+2026-10-21T21:03:27.837-05:00  WARN 30156 --- [KGarcia-InventoryApp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-21T21:03:27.839-05:00  WARN 30156 --- [KGarcia-InventoryApp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-10-21T21:04:27.106-05:00  INFO 30156 --- [KGarcia-InventoryApp] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-21T21:04:27.106-05:00  INFO 30156 --- [KGarcia-InventoryApp] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-21T21:04:27.108-05:00  INFO 30156 --- [KGarcia-InventoryApp] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-10-21T21:04:28.263-05:00  INFO 30156 --- [KGarcia-InventoryApp] [http-nio-8080-exec-7] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 505 ms
+2026-10-21T21:39:00.850-05:00  INFO 30156 --- [KGarcia-InventoryApp] [http-nio-8080-exec-7] c.e.k.services.ItemService               : Item deleted with ID: 421893
+2026-10-21T21:39:12.447-05:00  INFO 30156 --- [KGarcia-InventoryApp] [http-nio-8080-exec-1] c.e.k.services.ItemService               : Error, no item with ID: 421893
+2026-10-21T21:39:25.680-05:00  INFO 30156 --- [KGarcia-InventoryApp] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-21T21:39:25.698-05:00  INFO 30156 --- [KGarcia-InventoryApp] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-21T21:39:25.710-05:00  INFO 30156 --- [KGarcia-InventoryApp] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-21T21:39:25.718-05:00  INFO 30156 --- [KGarcia-InventoryApp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-10-21T21:39:25.735-05:00  INFO 30156 --- [KGarcia-InventoryApp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-10-21T21:39:29.336-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : Starting KGarciaInventoryAppApplication using Java 25.0.2 with PID 5496 (C:\Users\westh\Java III\Module 6\KGarcia-InventoryApp\target\classes started by westh in C:\Users\westh\Java III\Module 6\KGarcia-InventoryApp)
+2026-10-21T21:39:29.339-05:00 DEBUG 5496 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : Running with Spring Boot v4.1.1, Spring v7.0.9
+2026-10-21T21:39:29.340-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : The following 1 profile is active: "dev"
+2026-10-21T21:39:29.387-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-10-21T21:39:29.387-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-10-21T21:39:30.380-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-21T21:39:30.439-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51 ms. Found 3 JPA repository interfaces.
+2026-10-21T21:39:31.117-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-21T21:39:31.130-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-21T21:39:31.131-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-21T21:39:31.196-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1809 ms
+2026-10-21T21:39:31.424-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-21T21:39:31.502-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-10-21T21:39:31.998-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-21T21:39:32.032-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-21T21:39:32.306-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./data/inventory-registration user=ADMIN
+2026-10-21T21:39:32.307-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-21T21:39:32.369-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:file:./data/inventory-registration]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: INVENTORY-REGISTRATION/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-21T21:39:33.391-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-21T21:39:33.456-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-21T21:39:33.551-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-10-21T21:39:34.240-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userService
+2026-10-21T21:39:34.460-05:00  WARN 5496 --- [KGarcia-InventoryApp] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-21T21:39:35.199-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/inventory-registration'
+2026-10-21T21:39:35.251-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-21T21:39:35.256-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : Started KGarciaInventoryAppApplication in 6.481 seconds (process running for 7.632)
+2026-10-21T21:39:35.465-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.services.UserService               : User already exists: uTest
+2026-10-21T21:39:35.535-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.services.UserService               : User already exists: mTest
+2026-10-21T21:39:35.601-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.services.UserService               : User already exists: aTest
+2026-10-21T21:39:35.670-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.services.UserService               : User already exists: uUser
+2026-10-21T21:39:35.670-05:00  WARN 5496 --- [KGarcia-InventoryApp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-21T21:39:35.671-05:00  WARN 5496 --- [KGarcia-InventoryApp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-10-21T21:39:42.849-05:00  INFO 5496 --- [KGarcia-InventoryApp] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-21T21:39:42.850-05:00  INFO 5496 --- [KGarcia-InventoryApp] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-21T21:39:42.852-05:00  INFO 5496 --- [KGarcia-InventoryApp] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-10-21T21:39:43.862-05:00  INFO 5496 --- [KGarcia-InventoryApp] [http-nio-8080-exec-9] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 382 ms
+2026-10-21T21:42:31.789-05:00  INFO 5496 --- [KGarcia-InventoryApp] [http-nio-8080-exec-10] c.e.k.services.ItemService               : Error, no item with ID: 421893
+2026-10-21T22:00:17.662-05:00  INFO 5496 --- [KGarcia-InventoryApp] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2026-10-21T22:00:17.670-05:00  INFO 5496 --- [KGarcia-InventoryApp] [Thread-1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-21T22:00:17.689-05:00  INFO 5496 --- [KGarcia-InventoryApp] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-21T22:00:17.697-05:00  INFO 5496 --- [KGarcia-InventoryApp] [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-21T22:00:17.703-05:00  INFO 5496 --- [KGarcia-InventoryApp] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-10-21T22:00:17.763-05:00  INFO 5496 --- [KGarcia-InventoryApp] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-10-21T22:00:17.904-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : Starting KGarciaInventoryAppApplication using Java 25.0.2 with PID 5496 (C:\Users\westh\Java III\Module 6\KGarcia-InventoryApp\target\classes started by westh in C:\Users\westh\Java III\Module 6\KGarcia-InventoryApp)
+2026-10-21T22:00:17.904-05:00 DEBUG 5496 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : Running with Spring Boot v4.1.1, Spring v7.0.9
+2026-10-21T22:00:17.904-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : The following 1 profile is active: "dev"
+2026-10-21T22:00:18.257-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-21T22:00:18.273-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 3 JPA repository interfaces.
+2026-10-21T22:00:18.460-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-21T22:00:18.462-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-21T22:00:18.462-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-21T22:00:18.505-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 598 ms
+2026-10-21T22:00:18.578-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-21T22:00:18.642-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-21T22:00:18.644-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-10-21T22:00:18.663-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:file:./data/inventory-registration user=ADMIN
+2026-10-21T22:00:18.664-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-10-21T22:00:18.665-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:file:./data/inventory-registration]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: INVENTORY-REGISTRATION/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-21T22:00:18.796-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-21T22:00:18.801-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-21T22:00:18.834-05:00  WARN 5496 --- [KGarcia-InventoryApp] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'itemRestController' defined in file [C:\Users\westh\Java III\Module 6\KGarcia-InventoryApp\target\classes\com\example\kgarciainventoryapp\api\ItemRestController.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.example.kgarciainventoryapp.services.ItemService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2026-10-21T22:00:18.835-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-21T22:00:18.835-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2026-10-21T22:00:18.861-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2026-10-21T22:00:18.863-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-10-21T22:00:18.874-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-10-21T22:00:18.905-05:00 ERROR 5496 --- [KGarcia-InventoryApp] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.example.kgarciainventoryapp.api.ItemRestController required a bean of type 'com.example.kgarciainventoryapp.services.ItemService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.example.kgarciainventoryapp.services.ItemService' in your configuration.
+
+2026-10-21T22:00:20.417-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : Starting KGarciaInventoryAppApplication using Java 25.0.2 with PID 5496 (C:\Users\westh\Java III\Module 6\KGarcia-InventoryApp\target\classes started by westh in C:\Users\westh\Java III\Module 6\KGarcia-InventoryApp)
+2026-10-21T22:00:20.418-05:00 DEBUG 5496 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : Running with Spring Boot v4.1.1, Spring v7.0.9
+2026-10-21T22:00:20.418-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : The following 1 profile is active: "dev"
+2026-10-21T22:00:20.780-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-21T22:00:20.809-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 3 JPA repository interfaces.
+2026-10-21T22:00:21.017-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-21T22:00:21.019-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-21T22:00:21.019-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-21T22:00:21.063-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 643 ms
+2026-10-21T22:00:21.143-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-21T22:00:21.187-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-21T22:00:21.188-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2026-10-21T22:00:21.206-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection conn14: url=jdbc:h2:file:./data/inventory-registration user=ADMIN
+2026-10-21T22:00:21.206-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2026-10-21T22:00:21.206-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:file:./data/inventory-registration]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: INVENTORY-REGISTRATION/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-21T22:00:21.317-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-21T22:00:21.325-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-21T22:00:21.493-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userService
+2026-10-21T22:00:21.566-05:00  WARN 5496 --- [KGarcia-InventoryApp] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-21T22:00:21.920-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/inventory-registration'
+2026-10-21T22:00:21.948-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-21T22:00:21.951-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : Started KGarciaInventoryAppApplication in 1.575 seconds (process running for 1254.326)
+2026-10-21T22:00:22.053-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.services.UserService               : User already exists: uTest
+2026-10-21T22:00:22.124-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.services.UserService               : User already exists: mTest
+2026-10-21T22:00:22.200-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.services.UserService               : User already exists: aTest
+2026-10-21T22:00:22.269-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.services.UserService               : User already exists: uUser
+2026-10-21T22:00:22.269-05:00  WARN 5496 --- [KGarcia-InventoryApp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-21T22:00:22.269-05:00  WARN 5496 --- [KGarcia-InventoryApp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-10-21T22:00:22.271-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-21T22:01:02.602-05:00  INFO 5496 --- [KGarcia-InventoryApp] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2026-10-21T22:01:02.603-05:00  INFO 5496 --- [KGarcia-InventoryApp] [Thread-6] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-21T22:01:02.620-05:00  INFO 5496 --- [KGarcia-InventoryApp] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-21T22:01:02.623-05:00  INFO 5496 --- [KGarcia-InventoryApp] [Thread-6] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-21T22:01:02.624-05:00  INFO 5496 --- [KGarcia-InventoryApp] [Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2026-10-21T22:01:02.646-05:00  INFO 5496 --- [KGarcia-InventoryApp] [Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2026-10-21T22:01:02.764-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : Starting KGarciaInventoryAppApplication using Java 25.0.2 with PID 5496 (C:\Users\westh\Java III\Module 6\KGarcia-InventoryApp\target\classes started by westh in C:\Users\westh\Java III\Module 6\KGarcia-InventoryApp)
+2026-10-21T22:01:02.764-05:00 DEBUG 5496 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : Running with Spring Boot v4.1.1, Spring v7.0.9
+2026-10-21T22:01:02.764-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : The following 1 profile is active: "dev"
+2026-10-21T22:01:03.004-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-21T22:01:03.018-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 3 JPA repository interfaces.
+2026-10-21T22:01:03.185-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-21T22:01:03.186-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-21T22:01:03.186-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-21T22:01:03.235-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 469 ms
+2026-10-21T22:01:03.310-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-21T22:01:03.348-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-21T22:01:03.350-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2026-10-21T22:01:03.366-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection conn24: url=jdbc:h2:file:./data/inventory-registration user=ADMIN
+2026-10-21T22:01:03.366-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2026-10-21T22:01:03.367-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:file:./data/inventory-registration]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: INVENTORY-REGISTRATION/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-21T22:01:03.457-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-21T22:01:03.464-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-21T22:01:03.497-05:00  WARN 5496 --- [KGarcia-InventoryApp] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'itemRestController' defined in file [C:\Users\westh\Java III\Module 6\KGarcia-InventoryApp\target\classes\com\example\kgarciainventoryapp\api\ItemRestController.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.example.kgarciainventoryapp.services.ItemService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2026-10-21T22:01:03.497-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-21T22:01:03.498-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2026-10-21T22:01:03.527-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2026-10-21T22:01:03.528-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-10-21T22:01:03.538-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-10-21T22:01:03.551-05:00 ERROR 5496 --- [KGarcia-InventoryApp] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.example.kgarciainventoryapp.api.ItemRestController required a bean of type 'com.example.kgarciainventoryapp.services.ItemService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.example.kgarciainventoryapp.services.ItemService' in your configuration.
+
+2026-10-21T22:01:05.029-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : Starting KGarciaInventoryAppApplication using Java 25.0.2 with PID 5496 (C:\Users\westh\Java III\Module 6\KGarcia-InventoryApp\target\classes started by westh in C:\Users\westh\Java III\Module 6\KGarcia-InventoryApp)
+2026-10-21T22:01:05.030-05:00 DEBUG 5496 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : Running with Spring Boot v4.1.1, Spring v7.0.9
+2026-10-21T22:01:05.030-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : The following 1 profile is active: "dev"
+2026-10-21T22:01:05.270-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-21T22:01:05.284-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 3 JPA repository interfaces.
+2026-10-21T22:01:05.379-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-21T22:01:05.379-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-21T22:01:05.379-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-21T22:01:05.408-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 376 ms
+2026-10-21T22:01:05.456-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-21T22:01:05.491-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-21T22:01:05.492-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2026-10-21T22:01:05.506-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection conn26: url=jdbc:h2:file:./data/inventory-registration user=ADMIN
+2026-10-21T22:01:05.506-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2026-10-21T22:01:05.507-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:file:./data/inventory-registration]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: INVENTORY-REGISTRATION/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-21T22:01:05.591-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-21T22:01:05.597-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-21T22:01:05.767-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userService
+2026-10-21T22:01:05.822-05:00  WARN 5496 --- [KGarcia-InventoryApp] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-21T22:01:06.180-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/inventory-registration'
+2026-10-21T22:01:06.222-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-21T22:01:06.225-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.KGarciaInventoryAppApplication     : Started KGarciaInventoryAppApplication in 1.221 seconds (process running for 1298.6)
+2026-10-21T22:01:06.348-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.services.UserService               : User already exists: uTest
+2026-10-21T22:01:06.434-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.services.UserService               : User already exists: mTest
+2026-10-21T22:01:06.511-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.services.UserService               : User already exists: aTest
+2026-10-21T22:01:06.587-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] c.e.k.services.UserService               : User already exists: uUser
+2026-10-21T22:01:06.588-05:00  WARN 5496 --- [KGarcia-InventoryApp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-21T22:01:06.588-05:00  WARN 5496 --- [KGarcia-InventoryApp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-10-21T22:01:06.589-05:00  INFO 5496 --- [KGarcia-InventoryApp] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-21T22:01:09.876-05:00  INFO 5496 --- [KGarcia-InventoryApp] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-21T22:01:09.877-05:00  INFO 5496 --- [KGarcia-InventoryApp] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-21T22:01:09.878-05:00  INFO 5496 --- [KGarcia-InventoryApp] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-10-21T22:01:09.886-05:00 DEBUG 5496 --- [KGarcia-InventoryApp] [http-nio-8080-exec-1] c.e.k.web.ItemViewController             : Item with id: 421893 not found to view
+2026-10-21T22:01:20.213-05:00  INFO 5496 --- [KGarcia-InventoryApp] [http-nio-8080-exec-9] c.e.k.services.ItemService               : Item deleted with ID: 546513

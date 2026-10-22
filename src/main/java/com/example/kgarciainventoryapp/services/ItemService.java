@@ -128,13 +128,13 @@ public class ItemService {
         if (requestDTO.getManufacturer() != null){
             item.setManufacturer(requestDTO.getManufacturer());
         }
-        /**
+
         if (requestDTO.getPrice() != null){
             item.setPrice(requestDTO.getPrice());
         }
         if (requestDTO.getInventory() != null){
             item.setInventory(requestDTO.getInventory());
-        }**/
+        }
         if (requestDTO.getItemType() != null){
             item.setItemType(requestDTO.getItemType());
         }

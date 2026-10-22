@@ -51,7 +51,7 @@ public class ItemRestController {
     }
 
     @GetMapping("/{id}")
-    //@SecurityRequirement(name = "bearerAuth")
+    @SecurityRequirement(name = "bearerAuth")
     public ResponseEntity<ItemResponseDTO> getItem(@PathVariable String id,
                                                    @AuthenticationPrincipal Jwt jwt) {
         Optional<Item> item = itemService.getItemById(id);
@@ -98,7 +98,7 @@ public class ItemRestController {
     }
 
     @DeleteMapping("/{id}")
-    @SecurityRequirement(name = "bearer/Auth")
+    @SecurityRequirement(name = "bearerAuth")
     public ResponseEntity<Void> deleteItem(@PathVariable String id){
         boolean deleted = itemService.deleteItemById(id);
 

@@ -1,7 +1,10 @@
 package com.example.kgarciainventoryapp.security;
 
+import com.example.kgarciainventoryapp.Domain.User;
 import com.example.kgarciainventoryapp.api.LoginRequestDTO;
 import com.example.kgarciainventoryapp.api.TokenResponseDTO;
+import com.example.kgarciainventoryapp.api.UserResponseDTO;
+import com.example.kgarciainventoryapp.api.UserRegistrationRequestDTO;
 import com.example.kgarciainventoryapp.services.ApiAuthService;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
@@ -39,7 +42,6 @@ public class ApiAuthController {
         }
     }
 
-    /**
     @PostMapping("/logout")
     @SecurityRequirement(name="bearerAuth")
     public ResponseEntity<Void> logout(@AuthenticationPrincipal Jwt jwt) {
@@ -66,5 +68,5 @@ public class ApiAuthController {
         catch(IllegalArgumentException ex) {
             return ResponseEntity.badRequest().build();
         }
-    } **/
+    }
 }
