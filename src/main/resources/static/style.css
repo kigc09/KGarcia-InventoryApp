@@ -38,7 +38,7 @@ nav{
 }
 
 nav a{
-    font-size: 1.5em;
+    font-size: 2em;
     text-decoration: none;
     color: white;
     margin-right: 14%;
@@ -79,8 +79,84 @@ main h2{
     text-align: center;
 }
 
-.searchFilter{
+.searchFilter, .item-list{
     text-align: center;
+    font-size: 50px;
+}
+
+.item-list-items{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.listItemImage{
+    padding-top: 40px;
+    width: 125%;
+    height: 270px;
+    object-fit: contain;
+}
+
+.viewItemImage{
+    width: 575px;
+    height: 670px;
+    object-fit: contain;
+}
+
+.item-name, .item-price{
+    margin: 5px 0;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.item-name a{
+    text-decoration: none;
+}
+
+.item-container{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    margin: auto;
+}
+
+.imageLeft{
+    flex: 1;
+    display: flex;
+}
+
+.item-details{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.item-details h2{
+    margin: 0;
+}
+
+.item-details p{
+    font-size: 25px;
+    font-weight: bold;
+    margin: 8px 0;
+}
+
+.item-details span{
+    font-weight: normal;
+    margin: 0;
 }
 
 image{
@@ -104,7 +180,7 @@ section{
     border-radius: 15px;
     margin-top: 25px;
     margin-bottom: 25px;
-    background-color: #CBC3E3;
+    background-color: #ffffff;
 }
 
 form{
@@ -120,7 +196,7 @@ form{
     font-size: 16px;
 }
 
-form input, form select {
+form input, form select, form a {
     width: 100%;
     box-sizing:  border-box;
 
@@ -128,12 +204,23 @@ form input, form select {
     margin-bottom: 15px;
     padding: 10px;
 
-    font-size: 16px;
+    font-size: 20px;
+    font-weight: bold;
+
+    gap: 10px;
+    text-decoration: none;
 }
+
+form label{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
 
 .listNavigation {
     text-align: center;
-    font-size: 1.5em;
+    font-size: 1.7em;
     text-decoration: none;
     margin-right: 2px;
     margin-left:2px;
@@ -142,13 +229,15 @@ form input, form select {
 
 .listNavigation a:link {
     color: #3A5B24;
-
+    text-decoration: none;
 }
 .listNavigation a:visited {
     color: purple;
+    text-decoration: none;
 }
 .listNavigation a:hover{
     color: black;
+    text-decoration: none;
 }
 
 footer {

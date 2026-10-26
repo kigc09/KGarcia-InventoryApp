@@ -8,9 +8,11 @@
     <main>
         <div>
             <h3 class="searchFilter">Search or Filter Items</h3>
-            <form method="GET" th:action="@{/list}">
-                Name: <input type="text" name="searchName" th:value="${searchName}">
-                Type: <select name="filterType">
+            <form class="searchFilter-form" method="GET" th:action="@{/list}">
+                <label>Name: </label>
+                <input type="text" name="searchName" th:value="${searchName}">
+                <label>Type: </label>
+                <select name="filterType">
                 <option value=""></option>
                 <option th:each="t : ${ItemType}"
                         th:value="${t.name()}"
@@ -24,21 +26,19 @@
         </div>
 
 
-        <h2>Item List</h2>
+        <h2 class="item-list">Item List</h2>
         <div th:if="${itemDB == null || itemDB.isEmpty()}">
             <p>Empty.</p>
         </div>
 
-
-
-        <div th:unless="${itemDB == null || itemDB.isEmpty()}">
-            <section th:each="current : ${itemDB.content}">
-                <img class="listItemImage" th:if="${current.hasImage()}" width="125" height="125"
-                     th:src="${current.image.getDataUri()}" alt="Image of the pet."/>
-                <img class="listItemImage" th:unless="${current.hasImage()}" width="125" height="125"
+        <div class="item-list-items" th:unless="${itemDB == null || itemDB.isEmpty()}">
+            <section class="item" th:each="current : ${itemDB.content}">
+                <img class="listItemImage" th:if="${current.hasImage()}"
+                     th:src="${current.image.getDataUri()}" alt="Image of the item."/>
+                <img class="listItemImage" th:unless="${current.hasImage()}"
                      th:src="@{/Images/noimage.png}" alt="No image provided."/><br>
-                <h3><a th:href="@{'/view/current/'+${current.id}}" th:text="${current.name}">NAME OF THE ITEM</a></h3>
-                <p th:text="${current.itemType}">TYPE</p>
+                <h3 class="item-name"><a th:href="@{'/view/current/'+${current.id}}" th:text="${current.name}">NAME OF THE ITEM</a></h3>
+                <p class="item-price">$<span  th:text="${#numbers.formatDecimal(current.price,1,2)}"></span></p>
             </section>
         </div>
 
