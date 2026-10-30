@@ -4,20 +4,19 @@ spring:
   servlet:
     multipart:
       max-file-size: 5MB
+  kafka:
+    bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS:localhost:9092}
 
-kafka:
-  bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS:localhost:9092}
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JacksonJsonSerializer
 
-  producer:
-    key-serializer: org.apache.kafka.common.serialization.StringSerializer
-    value-serializer: org.springframework.kafka. support.serializer.JacksonJsonSerialiser
-
-  consumer:
-    key-deserializer: org.apache.kafka.common.serialtion.StringDeserializer
-    value-serializer: org.springframework.kafka. support.serializer.JacksonJsonSerialiser
-    auto-offset-reset: earliest
-    properties:
-      spring.json.trusted.packages: "com.example.kgarciainventoryapp.messaging"
+    consumer:
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JacksonJsonDeserializer
+      auto-offset-reset: earliest
+      properties:
+        spring.json.trusted.packages: "com.example.kgarciainventoryapp.messaging"
   mail:
     host: ${MAIL_HOST:sandbox.smtp.mailtrap.io}
     port: ${MAIL_PORT:2525}

@@ -18,6 +18,9 @@ public class Item {
     @Enumerated(EnumType.STRING)
     private ItemType itemType;
 
+    @Column(name="low_inventory", nullable = false, columnDefinition = "integer default 5")
+    private int lowInventory;
+
     @Embedded
     private Image image;
 
@@ -88,6 +91,10 @@ public class Item {
     public void setImage(Image image){this.image = image;}
 
     public boolean hasImage() { return image != null && image.getContents().length > 0; }
+
+    public int getLowInventory() { return lowInventory; }
+
+    public void setLowInventory(int lowInventory) { this.lowInventory = lowInventory; }
 
     @Override
     public String toString(){

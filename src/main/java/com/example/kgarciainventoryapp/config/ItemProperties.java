@@ -6,7 +6,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 public class ItemProperties {
 
     private int pageSize = 9;
-    private int lowInventory = 3;
+    private int lowInventory;
 
     public int getPageSize() {
         return pageSize;

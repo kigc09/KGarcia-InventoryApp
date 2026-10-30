@@ -29,11 +29,6 @@ public class ItemListController {
         itemProperties = ip;
     }
 
-    /*
-    @Autowired
-    private ItemDB itemDB;
-    */
-
 
     @ModelAttribute
     public void addItemTypeToModel(Model model){ model.addAttribute("ItemType", ItemType.values()); }

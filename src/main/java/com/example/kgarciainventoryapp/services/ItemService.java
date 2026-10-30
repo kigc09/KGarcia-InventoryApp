@@ -3,10 +3,13 @@ package com.example.kgarciainventoryapp.services;
 import com.example.kgarciainventoryapp.Domain.User;
 import com.example.kgarciainventoryapp.api.ItemPatchRequestDTO;
 import com.example.kgarciainventoryapp.api.ItemRequestMapper;
+import com.example.kgarciainventoryapp.config.ItemProperties;
 import com.example.kgarciainventoryapp.data.ItemRepository;
 import com.example.kgarciainventoryapp.Domain.Item;
 import com.example.kgarciainventoryapp.Domain.ItemType;
 import com.example.kgarciainventoryapp.data.UserRepository;
+import com.example.kgarciainventoryapp.messaging.LowInventoryEvent;
+import com.example.kgarciainventoryapp.messaging.LowInventoryEventProducer;
 import com.example.kgarciainventoryapp.web.RegistrationController;
 import jakarta.transaction.Transactional;
 import org.slf4j.Logger;
@@ -27,10 +30,28 @@ public class ItemService {
     private static final Logger logger = LoggerFactory.getLogger(ItemService.class);
     private final ItemRepository itemRepo;
     private final UserRepository userRepo;
+    private final LowInventoryEventProducer lowInvEventProducer;
+    private ItemProperties itemProperties;
 
-    public ItemService(ItemRepository ir, UserRepository ur){
-        itemRepo = ir;
-        userRepo = ur;
+    public ItemService(ItemRepository ir, UserRepository ur,LowInventoryEventProducer lowInvEventProducer, ItemProperties itemProperties){
+        this.itemRepo = ir;
+        this.userRepo = ur;
+        this.lowInvEventProducer = lowInvEventProducer;
+        this.itemProperties = itemProperties;
+    }
+
+    private void lowInventory(Item item){
+        logger.info("Checking inventory: Item Id: {}, Name: {}, Inventory: {}",
+                item.getId(), item.getName(), item.getInventory());
+        logger.info("Current Inventory: {}",item.getInventory());
+        logger.info("Low Inventory: {}", item.getLowInventory());
+
+        if (item.getInventory() <= item.getLowInventory()){
+            logger.info("It's low");
+            LowInventoryEvent event = LowInventoryEvent.fromItem(item);
+
+            lowInvEventProducer.send(event);
+        }
     }
 
     @Transactional
@@ -45,6 +66,7 @@ public class ItemService {
         }
 
         item = itemRepo.save(item);
+        lowInventory(item);
 
         logger.info("Item Registered {}", item);
         return item;
@@ -90,7 +112,9 @@ public class ItemService {
         }
 
         item.setId(id);
-        itemRepo.save(item);
+        item.setLowInventory(lookup.getLowInventory());
+        Item updatedItem = itemRepo.save(item);
+        lowInventory(updatedItem);
 
         logger.info("Item was saved at ID: {}.", id);
         return true;
@@ -99,12 +123,18 @@ public class ItemService {
     @Transactional
     @PreAuthorize("hasRole('ADMIN') or hasRole('MNGR') or hasRole('ASSOC')")
     public boolean updateInventoryLevel(String id, int inventory){
-        if(!itemRepo.existsById(id)){
-            logger.info("Error in updating, ID: {} doesn't exist.", id);
+        Optional<Item> lookupItem = itemRepo.findById(id);
+
+        if(lookupItem.isEmpty()){
             return false;
         }
 
-        itemRepo.updateInventoryById(id, inventory);
+        Item item = lookupItem.get();
+        item.setInventory(inventory);
+
+        Item updatedItem = itemRepo.save(item);
+        lowInventory(updatedItem);
+
 
         logger.info("Item was updated at ID: {}", id);
 
@@ -143,6 +173,7 @@ public class ItemService {
         }
 
         Item updateItem = itemRepo.save(item);
+        lowInventory(updateItem);
 
         return Optional.of(updateItem);
     }

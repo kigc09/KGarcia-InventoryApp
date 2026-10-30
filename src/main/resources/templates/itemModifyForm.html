@@ -7,58 +7,61 @@
 <body id="pageCenter">
 <div th:replace="~{fragments :: header-nav}"></div>
 <main>
-    <aside class="imageRight">
-        <img th:if="${item.hasImage()}" th:src="${item.image.getDataUri()}" alt="Image of the item.">
-        <img th:unless="${item.hasImage()}" th:src="@{/Images/NoPhotoLarge.jpg}" alt="NO image provided.">
-    </aside>
-    <h2>Modify the Item</h2>
-    <div sec:authorize="hasAnyRole('ADMIN', 'MNGR')">
-        <form method="POST" th:object="${item}" th:action="@{'/view/current/'+${item.id}+'/edit'}" enctype="multipart/form-data">
-            <div sec:authorize="hasRole('ADMIN') or hasRole('MNGR')">
-                Name: <input itemType="text" th:field="*{name}" />
-                <span class="validationError"
-                      th:if="${#fields.hasErrors('name')}"
-                      th:errors="*{name}">NAME ERROR</span><br>
-                Manufacturer: <input type="text" th:field="*{manufacturer}"/>
-                <span class="validationError"
-                      th:if="${#fields.hasErrors('manufacturer')}"
-                      th:errors="*{name}">MANUFACTURER ERROR</span><br>
-                Type: <select th:field="*{itemType}">
-                    <option th:each="t : ${ItemType}"
-                            th:value="${t}"
-                            th:text="${t}">TYPE HERE</option>
-                </select><br>
-                Price: <input type="number" step="0.01" th:field="*{price}"/>
-                <span class="validationError"
-                      th:if="${#fields.hasErrors('price')}"
-                      th:errors="*{price}">
-                </span>
-                <br>
-                Upload Picture: <input type="file" th:field="*{image}"/><br>
-
-                Inventory: <input type="number" th:field="*{inventory}"/>
-                <span class="validationError"
-                      th:if="${#fields.hasErrors('inventory')}"
-                      th:errors="*{inventory}">
+    <div class="item-container">
+        <aside class="imageLeft">
+            <img class="viewItemImage" th:if="${item.hasImage()}" th:src="${item.image.getDataUri()}" alt="Image of the item.">
+            <img class="viewItemImage" th:unless="${item.hasImage()}" th:src="@{/Images/NoPhotoLarge.jpg}" alt="NO image provided.">
+        </aside>
+        <div sec:authorize="hasAnyRole('ADMIN', 'MNGR')">
+            <h2>Modify the Item</h2>
+            <form method="POST" th:object="${item}" th:action="@{'/view/current/'+${item.id}+'/edit'}" enctype="multipart/form-data">
+                <div sec:authorize="hasRole('ADMIN') or hasRole('MNGR')">
+                    Name: <input itemType="text" th:field="*{name}" />
+                    <span class="validationError"
+                          th:if="${#fields.hasErrors('name')}"
+                          th:errors="*{name}">NAME ERROR</span><br>
+                    Manufacturer: <input type="text" th:field="*{manufacturer}"/>
+                    <span class="validationError"
+                          th:if="${#fields.hasErrors('manufacturer')}"
+                          th:errors="*{name}">MANUFACTURER ERROR</span><br>
+                    Type: <select th:field="*{itemType}">
+                        <option th:each="t : ${ItemType}"
+                                th:value="${t}"
+                                th:text="${t}">TYPE HERE</option>
+                    </select><br>
+                    Price: <input type="number" step="0.01" th:field="*{price}"/>
+                    <span class="validationError"
+                          th:if="${#fields.hasErrors('price')}"
+                          th:errors="*{price}">
                     </span>
-                <br>
-                <button>Register Item</button>
-            </div>
-        </form>
-    </div>
-    <div>
-        <div sec:authorize="hasRole('ASSOC')">
-            <form method="POST" th:object="${item}" th:action="@{'/view/current/'+${item.id}+'/inventory'}" enctype="multipart/form-data">
+                    <br>
+                    Upload Picture: <input type="file" th:field="*{image}"/><br>
 
                     Inventory: <input type="number" th:field="*{inventory}"/>
                     <span class="validationError"
                           th:if="${#fields.hasErrors('inventory')}"
                           th:errors="*{inventory}">
-                            </span>
+                        </span>
                     <br>
-                    <button>Update Inventory</button>
-
+                    <button>Register Item</button>
+                </div>
             </form>
+        </div>
+
+        <div>
+            <div sec:authorize="hasRole('ASSOC')">
+                <form method="POST" th:object="${item}" th:action="@{'/view/current/'+${item.id}+'/inventory'}" enctype="multipart/form-data">
+
+                        Inventory: <input type="number" th:field="*{inventory}"/>
+                        <span class="validationError"
+                              th:if="${#fields.hasErrors('inventory')}"
+                              th:errors="*{inventory}">
+                                </span>
+                        <br>
+                        <button>Update Inventory</button>
+
+                </form>
+            </div>
         </div>
     </div>
 </main>

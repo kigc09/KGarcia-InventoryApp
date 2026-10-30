@@ -2,6 +2,15 @@ body{
 
 }
 
+.welcome-home-page{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.welcome-home-page p{
+    font-size: 25px;
+}
+
 header{
     position: relative;
     display: flex;
@@ -165,7 +174,7 @@ image{
 }
 
 .imageRight{
-    float:right;
+    float: right;
 }
 
 #pageCenter{

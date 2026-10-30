@@ -1,9 +1,11 @@
 package com.example.kgarciainventoryapp.config;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
-@ConfigurationProperties(prefix="inventory.messaging")
+@ConfigurationProperties(prefix="item.messaging")
 public class MessagingProperties {
+    @Value("${item.messaging.item-status-topic}")
     private String lowInventoryTopic;
     private String loggingGroup;
     private String emailGroup;
