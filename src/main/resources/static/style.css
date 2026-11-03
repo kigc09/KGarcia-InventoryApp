@@ -262,3 +262,24 @@ footer {
     color: red;
     font-style: italic;
 }
+
+.inventory-status {
+    display: inline-block;
+    padding: 8px 30px;
+    border-radius: 10px;
+    font-size: 28px;
+
+}
+
+.status-low-inventory{
+    color: #ab2525;
+    background-color: orange;
+    font-weight: 900;
+}
+
+.status-out-of-stock{
+    color: #ab2525;
+    background-color: #f19191;
+    font-weight: 900;
+}
+

@@ -2,13 +2,18 @@ spring:
   thymeleaf:
     cache: false
   datasource:
-    url: "jdbc:mysql://localhost:${MYSQL_PORT_FORWARD}/${MYSQL_DATABASE}"
+    url: "jdbc:mysql://${MYSQL_HOST}:${MYSQL_PORT}/${MYSQL_DATABASE}"
     username: "${MYSQL_USER}"
     password: "${MYSQL_PASSWORD}"
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: false
+  mail:
+    host: ${MAIL_HOST:sandbox.smtp.mailtrap.io}
+    port: ${MAIL_PORT:2525}
+    username: ${MAIL_USERNAME}
+    password: ${MAIL_PASSWORD}
 
-animal:
+item:
   page-size: 20

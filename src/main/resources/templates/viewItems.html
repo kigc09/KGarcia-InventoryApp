@@ -29,8 +29,11 @@
                  alt="No image provided."/>
             <br>
         </aside>
+
         <div class="item-details">
+
             <h2 th:text="${current.name}"></h2>
+
             <p>MANUFACTURER: <span th:text="${current.manufacturer}"></span></p>
             <p>PRICE: $<span  th:text="${#numbers.formatDecimal(current.price,1,2)}"></span></p>
 
@@ -39,6 +42,18 @@
                 <div sec:authorize="hasRole('ADMIN') or hasRole('MNGR') or hasRole('ASSOC')">
                     <p>INVENTORY: <span  th:text="${current.inventory}"></span></p>
                     <p>ITEM TYPE: <span th:text="${current.itemType}"></span></p>
+
+                    <div class="inventory-status">
+                        <span th:if="${current.inventory == 0}"
+                              class="status-out-of-stock">
+                            Out of Stock
+                        </span>
+                                <span th:if="${current.inventory <= 5 and current.inventory > 0 }"
+                                      class="status-low-inventory">
+                            Low Stock :C
+                        </span>
+                    </div>
+
                     <form method="GET" th:action="@{'/view/current/'+${current.id}+'/edit'}">
                         <input type="submit" value="Modify Item">
                     </form>

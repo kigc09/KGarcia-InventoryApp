@@ -1,9 +1,44 @@
 services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: item-registration-app
+    ports:
+      - "${APP_PORT_FORWARD:-8080}:8080"
+    environment:
+      SPRING_PROFILES_ACTIVE: prod
+      MYSQL_HOST: ${MYSQL_HOST}
+      MYSQL_PORT: ${MYSQL_PORT}
+      MYSQL_PORT_FORWARD: ${MYSQL_PORT_FORWARD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      KAFKA_BOOTSTRAP_SERVERS: kafka:19092
+      KAFKA_PET_STATUS_TOPIC: ${KAFKA_ITEM_STATUS_TOPIC}
+      KAFKA_LOGGING_GROUP: ${KAFKA_LOGGING_GROUP}
+      KAFKA_EMAIL_GROUP: ${KAFKA_EMAIL_GROUP}
+      KAFKA_TOPIC_PARTITIONS: ${KAFKA_TOPIC_PARTITIONS}
+      KAFKA_TOPIC_REPLICAS: ${KAFKA_TOPIC_REPLICAS}
+      JWT_SECRET: ${JWT_SECRET}
+      JWT_DURATION: ${JWT_DURATION:-8h}
+      MAIL_HOST: ${MAIL_HOST}
+      MAIL_PORT: ${MAIL_PORT}
+      MAIL_USERNAME: ${MAIL_USERNAME}
+      MAIL_PASSWORD: ${MAIL_PASSWORD}
+      MAIL_FROM: ${MAIL_FROM}
+    depends_on:
+      mysql:
+        condition: service_healthy
+      kafka:
+        condition: service_healthy
+    restart: unless-stopped
+
   mysql:
     image: mysql:latest
     container_name: inventory-system-mysql
     ports:
-      - "${MYSQL_PORT_FORWARD}:3306"
+      - "${MYSQL_PORT_FORWARD}:${MYSQL_PORT}"
     environment:
       MYSQL_DATABASE: ${MYSQL_DATABASE}
       MYSQL_USER: ${MYSQL_USER}
@@ -11,6 +46,16 @@ services:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
     volumes:
       - inventory_mysql_data:/var/lib/mysql
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "mysqladmin ping -h localhost -u root -p$${MYSQL_ROOT_PASSWORD}"
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
 
   kafka:
     image: apache/kafka:4.3.0
